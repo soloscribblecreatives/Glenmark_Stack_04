@@ -20,39 +20,14 @@
 
 .pop1 {
 	position: absolute;
-	right: 90px;
+	right: 0px;
 	bottom: 0px;
-	width: 90px;
-	height: 200px;
+	width: 220px;
+	height: 100px;
 	z-index: 10;
 }
 
 .c1ose1 {
-	position: absolute;
-	width: 1024px;
-	height: 768px;
-	display: none;
-	z-index: 12;
-}
-
-.pop_up2 {
-	position: absolute;
-	width: 1024px;
-	height: 768px;
-	display: none;
-	z-index: 8;
-}
-
-.pop2 {
-	position: absolute;
-	right: 0px;
-	bottom: 0px;
-	width: 90px;
-	height: 200px;
-	z-index: 10;
-}
-
-.c1ose2 {
 	position: absolute;
 	width: 1024px;
 	height: 768px;

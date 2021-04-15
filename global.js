@@ -198,7 +198,7 @@ if (typeof(localStorage.getItem('currentslide'))!='undefined' && localStorage.ge
 	
  } 
  
-	if(nextSlideNo <= 27){//number 3 is number of total slides present
+	if(nextSlideNo <= 10){//number 3 is number of total slides present
 	// alert(nextSlideNo);
 	var tempNext = localStorage.getItem(currentContentId+"_"+contentName+"_slideNo_"+nextSlideNo);
 
@@ -302,10 +302,10 @@ if(direction == 'b') {
 //custom slide changes ends here....
 
 	else{
-	if(page_id <= 27){
+	if(page_id <= 10){
 		page_id = page_id + 1;
 		//alert(page_id);
-		if(page_id == 28){
+		if(page_id == 11){
             flag=1;
         }
 	}

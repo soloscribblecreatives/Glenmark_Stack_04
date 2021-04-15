@@ -347,7 +347,7 @@ currentSlide();
 var selectedContentPath='';
 switch(pg_id){
 	case 1:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"><img src="slide1/1.jpg" width="1024" height="768" alt=""></div>';
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"><img src="slide1/1.jpg" width="1024" height="768" alt=""></div><div class="pop_up"><img src="slide1/2.jpg" width="1024" height="768" alt=""></div><div class="pop1" onclick="pop1()"></div><div class="c1ose1" onclick="close1()"></div>';
 	break;
 
 }
@@ -489,3 +489,17 @@ $(document).ready(function(){
 		$('.touchbtn').css("display","block");
 	})
 })
+
+/*--------------------- animation javascript -----------------------*/
+
+function pop1() {
+	$('.pop_up').css("display","block");
+	$('.pop1').css("display","none");
+	$('.c1ose1').css("display","block");
+}
+
+function close1() {
+	$('.pop_up').css("display","none");
+	$('.pop1').css("display","block");
+	$('.c1ose1').css("display","none");
+}
