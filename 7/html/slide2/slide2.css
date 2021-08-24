@@ -1,0 +1,36 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+.background {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	z-index: 1;
+}
+
+.pop_up {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	display: none;
+	z-index: 8;
+}
+
+.pop1 {
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	width: 150px;
+	height: 200px;
+	z-index: 10;
+}
+
+.c1ose1 {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	display: none;
+	z-index: 12;
+}
