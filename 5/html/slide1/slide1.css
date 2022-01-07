@@ -10,27 +10,26 @@
 	z-index: 1;
 }
 
-.pop_up {
-	position: absolute;
-	width: 1024px;
-	height: 768px;
-	display: none;
-	z-index: 8;
+.s2 {
+  position: absolute;
+  left: 503px;
+  top: 164px;
+  width: 491px;
+  height: 155px;
+  animation: flipInX 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+  z-index: 2;
 }
 
-.pop1 {
-	position: absolute;
-	right: 120px;
-	bottom: 0px;
-	width: 150px;
-	height: 200px;
-	z-index: 10;
-}
-
-.c1ose1 {
-	position: absolute;
-	width: 1024px;
-	height: 768px;
-	display: none;
-	z-index: 12;
+.s3 {
+  position: absolute;
+  left: 539px;
+  top: 348px;
+  width: 434px;
+  height: 281px;
+  animation: fadeInRight 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+  z-index: 3;
 }

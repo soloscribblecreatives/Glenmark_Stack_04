@@ -385,10 +385,10 @@ currentSlide();
 var selectedContentPath='';
 switch(pg_id){
 	case 1:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"><img src="slide1/1.jpg" width="1024" height="768" alt=""></div>';
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"><img src="slide1/s1_1.png" width="1024" height="768" alt=""></div><div class="s2"><img src="slide1/s1_2.png"></div>';
 	break;
 	case 2:
-	content='<link rel="stylesheet" type="text/css" href="slide2/slide2.css" media="screen"/><div class="background"><img src="slide2/1.jpg" width="1024" height="768" alt=""></div><div class="pop_up"><img src="slide2/2.jpg" width="1024" height="768" alt=""></div><div class="pop1" onclick="pop1()"></div><div class="c1ose1" onclick="close1()"></div>';
+	content='<link rel="stylesheet" type="text/css" href="slide2/slide2.css" media="screen"/><div class="background"><img src="slide2/s2_1.png" width="1024" height="768" alt=""></div><div class="s2"><img src="slide2/s2_2.gif"></div><div class="pop_up"><img src="slide2/s2_3.png" width="1024" height="768" alt=""></div><div class="pop1" onclick="pop1()"></div><div class="c1ose1" onclick="close1()"></div>';
 	break;
 }
 
