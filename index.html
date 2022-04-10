@@ -25,19 +25,6 @@
     <div class="box">
       <div class="slide_jumper">
 		  <div class="slides"><img src="thumbs/01.png" alt=""></div>
-          <div class="slides"><img src="thumbs/02.png" alt=""></div>
-          <div class="slides"><img src="thumbs/03.png" alt=""></div> 
-          <div class="slides"><img src="thumbs/04.png" alt=""></div> 
-          <div class="slides"><img src="thumbs/05.png" alt=""></div> 
-          <div class="slides"><img src="thumbs/06.png" alt=""></div> 
-          <div class="slides"><img src="thumbs/07.png" alt=""></div> 
-          <div class="slides"><img src="thumbs/08.png" alt=""></div> 
-          <div class="slides"><img src="thumbs/09.png" alt=""></div> 
-          <div class="slides"><img src="thumbs/10.png" alt=""></div> 
-          <div class="slides"><img src="thumbs/11.png" alt=""></div> 
-          <div class="slides"><img src="thumbs/12.png" alt=""></div> 
-          <div class="slides"><img src="thumbs/13.png" alt=""></div> 
-          <div class="slides"><img src="thumbs/14.png" alt=""></div>
       </div>
     </div>
     <div class="box_btn"></div>
@@ -73,7 +60,7 @@ var selectedContentPath = 'slide1/';
 if (typeof(localStorage.getItem("currentcustomslideflag"))!='undefined' && localStorage.getItem("currentcustomslideflag") =='true'){
 	var custcomslideid = parseInt(localStorage.getItem("currentcontentcustomslideId")) ;
 	
-	switch(custcomslideid){
+switch(custcomslideid){
 	case 1:
 	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><iframe src="1/html/index.html" class="background1" height="768" width="1024" frameBorder="0" title="Iframe Example"></iframe>';
 	break;
@@ -115,6 +102,18 @@ if (typeof(localStorage.getItem("currentcustomslideflag"))!='undefined' && local
 	break;
 	case 14:
 	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><iframe src="14/html/index.html" class="background1" height="768" width="1024" frameBorder="0" title="Iframe Example"></iframe>';
+	break;
+	case 15:
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><iframe src="15/html/index.html" class="background1" height="768" width="1024" frameBorder="0" title="Iframe Example"></iframe>';
+	break;
+	case 16:
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><iframe src="16/html/index.html" class="background1" height="768" width="1024" frameBorder="0" title="Iframe Example"></iframe>';
+	break;
+	case 17:
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><iframe src="17/html/index.html" class="background1" height="768" width="1024" frameBorder="0" title="Iframe Example"></iframe>';
+	break;
+	case 18:
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><iframe src="18/html/index.html" class="background1" height="768" width="1024" frameBorder="0" title="Iframe Example"></iframe>';
 	break;
 }
 

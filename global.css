@@ -9,12 +9,13 @@ body {
 }
 #container {
 	position: absolute;
-	width: 1280px;
-	height: 726px;
+	width: 1024px;
+	height: 768px;
 	background-color: #232E3D;
 	font-family: 'DINOT', 'Helvetica Neue', sans-serif;
 	overflow: hidden;
-}
+}	
+
 .bg {
 	position: absolute;
 	background-position: center top;
@@ -208,6 +209,7 @@ html[xmlns] .clearfix {
 	visibility: visible;
 	z-index: 999;
 } */
+
 .reference.active {
 	bottom: 0%;
 }
@@ -222,6 +224,7 @@ html[xmlns] .clearfix {
 	background-image: url(close.png);
 	bottom: 157px;
 }
+
 #myconsole {
 	display: none;
 	position: fixed;
@@ -235,10 +238,15 @@ html[xmlns] .clearfix {
 	color: #ffffff;
 }
 
+#main_content {
+	position: absolute;
+	margin: 0px;
+	padding: 0px;
+}
+
 .background1 {
 	position: relative;
 	width: 1024px;
 	height: 768px;
 	z-index: 1;
 }
-	
