@@ -1,0 +1,143 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+.s5_1 {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	z-index: 1;
+}
+
+.s5_2 {
+	position: absolute;
+  left: 553px;
+  top: 348px;
+  width: 241px;
+  height: 35px;
+	animation: fadeInRight 1s;
+	animation-delay: 0.5s;
+	animation-fill-mode: both;
+	z-index: 4;
+}
+
+.s5_3 {
+	position: absolute;
+  left: 162px;
+  top: 394px;
+  width: 245px;
+  height: 26px;
+	animation: flash 0.5s;
+	animation-delay: 1.5s;
+	animation-fill-mode: both;
+	z-index: 3;
+}
+
+.s5_5 {
+	position: absolute;
+  left: 201px;
+  top: 492px;
+  width: 45px;
+  height: 151px;
+	animation: revealVertical 1s;
+	clip: rect(0px,50px,0px,0px);
+	animation-delay: 2.5s;
+	animation-fill-mode: both;
+	z-index: 2;
+}
+
+.s5_6 {
+	position: absolute;
+  left: 187px;
+  top: 651px;
+  width: 74px;
+  height: 30px;
+    animation: flash 5s infinite;
+	animation-delay: 3s;
+	animation-fill-mode: both;
+	z-index: 2;
+}
+
+.s5_4 {
+	position: absolute;
+  left: 592px;
+  top: 387px;
+  width: 278px;
+  height: 33px;
+	animation: flash 0.5s;
+	animation-delay: 4.5s;
+	animation-fill-mode: both;
+	z-index: 2;
+}
+
+.s5_7 {
+	position: absolute;
+  left: 639px;
+  top: 492px;
+  width: 45px;
+  height: 170px;
+	animation: revealVertical 1s;
+	clip: rect(0px,50px,0px,0px);
+	animation-delay: 5.5s;
+	animation-fill-mode: both;
+	z-index: 2;
+}
+
+.s5_8 {
+	position: absolute;
+  left: 624px;
+  top: 674px;
+  width: 75px;
+  height: 31px;
+	animation: flash 5s infinite;
+	animation-delay: 6s;
+	animation-fill-mode: both;
+	z-index: 2;
+}
+
+
+@-webkit-keyframes fadeInDownSmall {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -25%, 0);
+    transform: translate3d(0, -25%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInDownSmall {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -25%, 0);
+    transform: translate3d(0, -25%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInDownSmallSmall {
+  -webkit-animation-name: fadeInDownSmall;
+  animation-name: fadeInDownSmall;
+}
+
+@keyframes revealVertical {
+  0% {
+    clip: rect(0px,50px,0px,0px);
+	opacity: 1;
+  }
+  
+  100% {
+    clip: rect(0px,50px,170px,0px);
+	opacity: 1;
+  }
+}
