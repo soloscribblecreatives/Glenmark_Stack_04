@@ -16,7 +16,7 @@
   top: 348px;
   width: 241px;
   height: 35px;
-	animation: fadeInRight 1s;
+	animation: none 1s;
 	animation-delay: 0.5s;
 	animation-fill-mode: both;
 	z-index: 4;
@@ -28,7 +28,7 @@
   top: 394px;
   width: 245px;
   height: 26px;
-	animation: flash 0.5s;
+	animation: none 0.5s;
 	animation-delay: 1.5s;
 	animation-fill-mode: both;
 	z-index: 3;
@@ -42,19 +42,7 @@
   height: 151px;
 	animation: revealVertical 1s;
 	clip: rect(0px,50px,0px,0px);
-	animation-delay: 2.5s;
-	animation-fill-mode: both;
-	z-index: 2;
-}
-
-.s5_6 {
-	position: absolute;
-  left: 187px;
-  top: 651px;
-  width: 74px;
-  height: 30px;
-    animation: flash 5s infinite;
-	animation-delay: 3s;
+	animation-delay: 0.5s;
 	animation-fill-mode: both;
 	z-index: 2;
 }
@@ -65,8 +53,8 @@
   top: 387px;
   width: 278px;
   height: 33px;
-	animation: flash 0.5s;
-	animation-delay: 4.5s;
+	animation: none 0.5s;
+	animation-delay: 3.5s;
 	animation-fill-mode: both;
 	z-index: 2;
 }
@@ -79,7 +67,19 @@
   height: 170px;
 	animation: revealVertical 1s;
 	clip: rect(0px,50px,0px,0px);
-	animation-delay: 5.5s;
+	animation-delay: 1.5s;
+	animation-fill-mode: both;
+	z-index: 2;
+}
+
+.s5_6 {
+	position: absolute;
+  left: 187px;
+  top: 651px;
+  width: 74px;
+  height: 30px;
+    animation: flashLight 5s infinite;
+	animation-delay: 2.5s;
 	animation-fill-mode: both;
 	z-index: 2;
 }
@@ -90,8 +90,8 @@
   top: 674px;
   width: 75px;
   height: 31px;
-	animation: flash 5s infinite;
-	animation-delay: 6s;
+	animation: flashLight 5s infinite;
+	animation-delay: 2.5s;
 	animation-fill-mode: both;
 	z-index: 2;
 }
@@ -139,5 +139,17 @@
   100% {
     clip: rect(0px,50px,170px,0px);
 	opacity: 1;
+  }
+}
+
+@keyframes flashLight {
+  0%, 50%, 100% {
+    opacity: 0.3;
+	transform: scale3d(0.7, 0.7, 0.7);
+  }
+
+  25%, 75% {
+    opacity: 1;
+	transform: scale3d(1, 1, 1);
   }
 }
