@@ -12,93 +12,86 @@
 
 .s7_2 {
 	position: absolute;
-  left: 100px;
-  top: 358px;
-  width: 87px;
-  height: 162px;
-	animation: revealVertical 1s;
-	clip: rect(0px,50px,0px,0px);
-	animation-delay: 0.3s;
+  left: 0px;
+  top: 0px;
+  width: 388px;
+  height: 528px;
+	animation: fadeInDown 1s;
+	animation-delay: 0s;
 	animation-fill-mode: both;
 	z-index: 4;
 }
 
 .s7_3 {
 	position: absolute;
-  left: 230px;
-  top: 358px;
-  width: 86px;
-  height: 162px;
-	animation: revealVertical 1s;
-	clip: rect(0px,50px,0px,0px);
-	animation-delay: 0.4s;
+  left: 466px;
+  top: 49px;
+  width: 467px;
+  height: 213px;
+	animation: zoomIn 1s;
+	animation-delay: 1s;
 	animation-fill-mode: both;
 	z-index: 3;
 }
 
 .s7_4 {
 	position: absolute;
-  left: 358px;
-  top: 358px;
-  width: 86px;
-  height: 162px;
-	animation: revealVertical 1s;
-	clip: rect(0px,50px,0px,0px);
-	animation-delay: 0.5s;
+  left: 59px;
+  top: 361px;
+  width: 265px;
+  height: 204px;
+	animation: stampIn 0.3s;
+	animation-delay: 2s;
 	animation-fill-mode: both;
-	z-index: 2;
+	z-index: 10;
 }
-
 
 .s7_5 {
 	position: absolute;
-  left: 487px;
-  top: 358px;
-  width: 87px;
-  height: 162px;
-	animation: revealVertical 1s;
-	clip: rect(0px,50px,0px,0px);
-	animation-delay: 0.6s;
+  left: 71px;
+  top: 609px;
+  width: 245px;
+  height: 94px;
+	animation: fadeInUp 1s;
+	animation-delay: 2.5s;
 	animation-fill-mode: both;
 	z-index: 2;
 }
 
 .s7_6 {
 	position: absolute;
-  left: 617px;
-  top: 358px;
-  width: 86px;
-  height: 162px;
-	animation: revealVertical 1s;
-	clip: rect(0px,50px,0px,0px);
-	animation-delay: 0.7s;
+  left: 494px;
+  top: 309px;
+  width: 414px;
+  height: 39px;
+	animation: fadeInUp 1s;
+	animation-delay: 3.5s;
 	animation-fill-mode: both;
 	z-index: 2;
 }
 
 .s7_7 {
 	position: absolute;
-  left: 746px;
-  top: 358px;
-  width: 85px;
-  height: 162px;
-	animation: revealVertical 1s;
-	clip: rect(0px,50px,0px,0px);
-	animation-delay: 0.8s;
+  left: 495px;
+  top: 413px;
+  width: 215px;
+  height: 250px;
+	animation: fadeInDownSmall 1s;
+	animation-delay: 4s;
 	animation-fill-mode: both;
 	z-index: 2;
 }
 
 .s7_8 {
 	position: absolute;
-  left: 874px;
-  top: 358px;
-  width: 87px;
-  height: 162px;
-	animation: revealVertical 1s;
-	clip: rect(0px,100px,0px,0px);
-	animation-delay: 0.9s;
+  left: 737px;
+  top: 413px;
+  width: 170px;
+  height: 250px;
+	animation: fadeInDownSmall 1s;
+	animation-delay: 4.5s;
 	animation-fill-mode: both;
+	opacity: 0;
 	z-index: 2;
 }
 
@@ -110,30 +103,12 @@
 	z-index: 10;
 }
 
-.s7_10 {
-	position: absolute;
-	width: 1024px;
-	height: 768px;
-	display: none;
-	z-index: 10;
-}
-
-
 .s7_pop1 {
 	position: absolute;
-  left: 702px;
-  top: 707px;
-  width: 93px;
-  height: 61px;
-	z-index: 15;
-}
-
-.s7_pop2 {
-	position: absolute;
-  left: 798px;
-  top: 707px;
-  width: 93px;
-  height: 61px;
+	height: 100px;
+	width: 150px;
+	right: 0px;
+	bottom: 0px;
 	z-index: 15;
 }
 
@@ -179,14 +154,38 @@
   animation-name: fadeInDownSmall;
 }
 
-@keyframes revealVertical {
-  0% {
-    clip: rect(0px,100px,0px,0px);
-	opacity: 1;
-  }
-  
-  100% {
-    clip: rect(0px,100px,170px,0px);
-	opacity: 1;
-  }
+
+@-webkit-keyframes stampIn {
+	0% {
+		opacity: 0;
+	}
+	10% {
+		transform-origin: 50% 50%;
+		transform: scale(3);
+		opacity: 0.5;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@keyframes stampIn {
+	0% {
+		opacity: 0;
+	}
+	10% {
+		transform-origin: 50% 50%;
+		transform: scale(3);
+		opacity: 0.5;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+.stampIn {
+  -webkit-animation-name: stampIn;
+  animation-name: stampIn;
 }

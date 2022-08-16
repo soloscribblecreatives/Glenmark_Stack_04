@@ -12,48 +12,59 @@
 
 .s6_2 {
 	position: absolute;
-  left: 612px;
-  top: 348px;
-  width: 245px;
-  height: 35px;
-	animation: none 1s;
-	animation-delay: 0.5s;
+  left: 0px;
+  top: 0px;
+  width: 388px;
+  height: 529px;
+	animation: fadeInDown 1s;
+	animation-delay: 0s;
 	animation-fill-mode: both;
 	z-index: 4;
 }
 
 .s6_3 {
 	position: absolute;
-  left: 162px;
-  top: 394px;
-  width: 245px;
-  height: 26px;
-	animation: none 0.5s;
-	animation-delay: 1.5s;
+  left: 466px;
+  top: 50px;
+  width: 467px;
+  height: 212px;
+	animation: zoomIn 1s;
+	animation-delay: 1s;
 	animation-fill-mode: both;
 	z-index: 3;
 }
 
+.s6_4 {
+	position: absolute;
+  left: 104px;
+  top: 413px;
+  width: 180px;
+  height: 183px;
+	animation: stampIn 0.3s;
+	animation-delay: 2s;
+	animation-fill-mode: both;
+	z-index: 10;
+}
+
 .s6_5 {
 	position: absolute;
-  left: 202px;
-  top: 494px;
-  width: 42px;
-  height: 141px;
-	animation: revealVertical 1s;
-	clip: rect(0px,50px,0px,0px);
-	animation-delay: 0.5s;
+  left: 72px;
+  top: 610px;
+  width: 244px;
+  height: 94px;
+	animation: fadeInUp 1s;
+	animation-delay: 2.5s;
 	animation-fill-mode: both;
 	z-index: 2;
 }
 
-.s6_4 {
+.s6_6 {
 	position: absolute;
-  left: 598px;
-  top: 385px;
-  width: 272px;
-  height: 35px;
-	animation: none 0.5s;
+  left: 495px;
+  top: 310px;
+  width: 413px;
+  height: 63px;
+	animation: fadeInUp 1s;
 	animation-delay: 3.5s;
 	animation-fill-mode: both;
 	z-index: 2;
@@ -61,41 +72,53 @@
 
 .s6_7 {
 	position: absolute;
-  left: 648px;
-  top: 494px;
-  width: 43px;
-  height: 187px;
-	animation: revealVertical 1s;
-	clip: rect(0px,50px,0px,0px);
-	animation-delay: 1.5s;
-	animation-fill-mode: both;
-	z-index: 2;
-}
-
-.s6_6 {
-	position: absolute;
-  left: 188px;
-  top: 643px;
-  width: 70px;
-  height: 30px;
-    animation: flashLight 5s infinite;
-	animation-delay: 2.5s;
+  left: 495px;
+  top: 414px;
+  width: 215px;
+  height: 249px;
+	animation: fadeInDownSmall 1s;
+	animation-delay: 4s;
 	animation-fill-mode: both;
 	z-index: 2;
 }
 
 .s6_8 {
 	position: absolute;
-  left: 635px;
-  top: 689px;
-  width: 70px;
-  height: 29px;
-	animation: flashLight 5s infinite;
-	animation-delay: 2.5s;
+  left: 737px;
+  top: 414px;
+  width: 170px;
+  height: 249px;
+	animation: fadeInDownSmall 1s;
+	animation-delay: 4.5s;
 	animation-fill-mode: both;
+	opacity: 0;
 	z-index: 2;
 }
 
+.s6_9 {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	display: none;
+	z-index: 10;
+}
+
+.s6_pop1 {
+	position: absolute;
+	height: 100px;
+	width: 150px;
+	right: 0px;
+	bottom: 0px;
+	z-index: 15;
+}
+
+.s6_c1ose1 {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	display: none;
+	z-index: 20;
+}
 
 
 @-webkit-keyframes fadeInDownSmall {
@@ -131,26 +154,38 @@
   animation-name: fadeInDownSmall;
 }
 
-@keyframes revealVertical {
-  0% {
-    clip: rect(0px,50px,0px,0px);
-	opacity: 1;
-  }
-  
-  100% {
-    clip: rect(0px,50px,200px,0px);
-	opacity: 1;
-  }
+
+@-webkit-keyframes stampIn {
+	0% {
+		opacity: 0;
+	}
+	10% {
+		transform-origin: 50% 50%;
+		transform: scale(3);
+		opacity: 0.5;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
 }
 
-@keyframes flashLight {
-  0%, 50%, 100% {
-    opacity: 0.3;
-	transform: scale3d(0.7, 0.7, 0.7);
-  }
+@keyframes stampIn {
+	0% {
+		opacity: 0;
+	}
+	10% {
+		transform-origin: 50% 50%;
+		transform: scale(3);
+		opacity: 0.5;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
 
-  25%, 75% {
-    opacity: 1;
-	transform: scale3d(1, 1, 1);
-  }
+.stampIn {
+  -webkit-animation-name: stampIn;
+  animation-name: stampIn;
 }
