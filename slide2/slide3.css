@@ -12,11 +12,11 @@
 
 .s3_2 {
   position: absolute;
-  left: 313px;
-  top: 81px;
+  left: 296px;
+  top: 462px;
   width: 431px;
   height: 283px;
-  animation: slideInUp 1s;
+  animation: slideInUp 0.5s;
   animation-delay: 0s;
   animation-fill-mode: both;
   z-index: 2;
@@ -24,8 +24,8 @@
 
 .s3_3 {
   position: absolute;
-  left: 169px;
-  top: 408px;
+  left: 154px;
+  top: 188px;
   width: 716px;
   height: 232px;
   animation: zoomIn 0.5s;
