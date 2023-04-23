@@ -462,21 +462,15 @@ function open_page(url,page_id){
 
 	if(currentslide == 1){
 	document.getElementById("click_through").innerHTML='';
-		$('.homebtn').css("display","none");
-		$('.pop1').css("display","none");
-		$('.pop2').css("display","none");
+		$('.pop1, .pop2, .homebtn').css("display","none");
 	}
     if(currentslide == 2){
 	document.getElementById("click_through").innerHTML='';
-		$('.homebtn').css("display","block");
-		$('.pop1').css("display","block");
-		$('.pop2').css("display","block");
+		$('.pop1, .pop2, .homebtn').css("display","block");
 	}
 	if(currentslide == 3){
 	document.getElementById("click_through").innerHTML='';
-		$('.homebtn').css("display","block");
-		$('.pop1').css("display","block");
-		$('.pop2').css("display","block");
+		$('.pop1, .pop2, .homebtn').css("display","block");
 	}
 }
 
@@ -601,6 +595,7 @@ function startAnime() {
 	$('.s1_5').css("display","block");
 	$('.s1_6').css("display","block");
 	$('#s1_6').css("display","block");
+	$('#s1_6').addClass("dragIn");
 	$('.s1_7').css("display","block");
 	$('.s1_8').css("display","block");
 	$('.s1_9').css("display","block");
