@@ -198,7 +198,7 @@ if (typeof(localStorage.getItem('currentslide'))!='undefined' && localStorage.ge
 	
  } 
  
-	if(nextSlideNo <= 10){//number 3 is number of total slides present
+	if(nextSlideNo <= 3){//number 3 is number of total slides present
 	// alert(nextSlideNo);
 	var tempNext = localStorage.getItem(currentContentId+"_"+contentName+"_slideNo_"+nextSlideNo);
 
@@ -302,10 +302,10 @@ if(direction == 'b') {
 //custom slide changes ends here....
 
 	else{
-	if(page_id <= 10){
+	if(page_id <= 3){
 		page_id = page_id + 1;
 		//alert(page_id);
-		if(page_id == 11){
+		if(page_id == 4){
             flag=1;
         }
 	}
@@ -385,34 +385,13 @@ currentSlide();
 var selectedContentPath='';
 switch(pg_id){
 	case 1:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide2.css" media="screen"/><div class="background"><img src="slide1/1.jpg" width="1024" height="768" alt=""></div>';
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="s1_1"><img src="slide1/s1_1.png"/></div><div class="zoomWrap"><div class="s1_2"><img src="slide1/s1_2.png"/></div><div class="s1_3" onclick="startAnime();"><img src="slide1/s1_3.png"/></div><div class="s1_4"><img src="slide1/s1_4.png"/></div><div class="s1_5"><img src="slide1/s1_5.png"/></div><div class="s1_6"><img id="s1_6" src="slide1/s1_6.png"/></div><div class="s1_7"><img src="slide1/s1_7.png"/></div><div class="s1_8"><img src="slide1/s1_8.png"/></div><div class="s1_9"><img src="slide1/s1_9.png"/></div></div><div class="s1_10"><img src="slide1/s1_10.png"/></div>';
 	break;
 	case 2:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide2.css" media="screen"/><div class="background"><img src="slide2/1.jpg" width="1024" height="768" alt=""></div>';
+	content='<link rel="stylesheet" type="text/css" href="slide2/slide3.css" media="screen"/><div class="s3_1"><img src="slide2/s3_1.png"/></div><div class="s3_2"><img src="slide2/s3_2.png"/></div><div class="s3_3"><img src="slide2/s3_3.gif"/></div>';
 	break;
-	case 3:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide2.css" media="screen"/><div class="background"><img src="slide3/1.jpg" width="1024" height="768" alt=""></div>';
-	break;
-	case 4:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide2.css" media="screen"/><div class="background"><img src="slide4/1.jpg" width="1024" height="768" alt=""></div>';
-	break;
-	case 5:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide2.css" media="screen"/><div class="background"><img src="slide5/1.jpg" width="1024" height="768" alt=""></div>';
-	break;
-	case 6:
-	content='<link rel="stylesheet" type="text/css" href="slide6/slide6.css" media="screen"/><div class="background"><img src="slide6/1.jpg" width="1024" height="768" alt=""></div><div class="kol" onclick="kol();"></div><video id="myVideo" width="1024" height="768" src="slide6/2.mp4" controls></video><div class="closekol" onclick="closekol();"></div>';
-	break;
-	case 7:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide2.css" media="screen"/><div class="background"><img src="slide7/1.jpg" width="1024" height="768" alt=""></div>';
-	break;
-	case 8:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide2.css" media="screen"/><div class="background"><img src="slide8/1.jpg" width="1024" height="768" alt=""></div>';
-	break;
-	case 9:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide2.css" media="screen"/><div class="background"><img src="slide9/1.jpg" width="1024" height="768" alt=""></div>';
-	break;
-	case 10:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide2.css" media="screen"/><div class="background"><img src="slide10/1.jpg" width="1024" height="768" alt=""></div>';
+    case 3:
+	content='<link rel="stylesheet" type="text/css" href="slide3/slide4.css" media="screen"/><div class="s4_1"><img src="slide3/s4_1.png"/></div><div class="s4_2"><img src="slide3/s4_2.png"/></div><div class="s4_3"><img src="slide3/s4_3.png"/></div><div class="s4_4"><img src="slide3/s4_4.png"/></div><div class="s4_5"><img src="slide3/s4_5.png"/></div><div class="s4_6"><img src="slide3/s4_6.png"/></div><div class="s4_7"><img src="slide3/s4_7.png"/></div><div class="s4_8"><img src="slide3/s4_8.png"/></div><div class="s4_9"><img src="slide3/s4_9.png"/></div><div class="kol" onclick="kol();"></div><video id="myVideo" width="1024" height="768" src="slide3/s4_12.mp4" controls></video><div class="closekol" onclick="closekol();"><img src="slide3/s4_13.png"></div>';
 	break;
 }
 
@@ -483,17 +462,28 @@ function open_page(url,page_id){
 
 	if(currentslide == 1){
 	document.getElementById("click_through").innerHTML='';
-		}
+		$('.homebtn').css("display","none");
+		$('.pop1').css("display","none");
+		$('.pop2').css("display","none");
+	}
     if(currentslide == 2){
 	document.getElementById("click_through").innerHTML='';
-		}
-
+		$('.homebtn').css("display","block");
+		$('.pop1').css("display","block");
+		$('.pop2').css("display","block");
 	}
+	if(currentslide == 3){
+	document.getElementById("click_through").innerHTML='';
+		$('.homebtn').css("display","block");
+		$('.pop1').css("display","block");
+		$('.pop2').css("display","block");
+	}
+}
 
 	function checkBtns(refNum){
 		switch(refNum){
 			case 1:
-			open_page('',1);
+			open_page('',3);
             break;
 		}
 	}
@@ -555,22 +545,42 @@ $(document).ready(function(){
 	})
 })
 
+/*--------------------- animation javascript -----------------------*/
 
-//----------------------------------//
-
-function pop_open() {
-	$('.popup').css('display','block');
-	$('.pop_open').css('display','none');
-	$('.pop_close').css('display','block');
+function pop1() {
+	$('.api').css("display","block");
+	$('.c1ose1').css("display","block");
+	$('.pop1').css("display","none");
 }
 
-function pop_close() {
-	$('.popup').css('display','none');
-	$('.pop_open').css('display','block');
-	$('.pop_close').css('display','none');
+function close1() {
+	$('.api').css("display","none");
+	$('.c1ose1').css("display","none");
+	$('.pop1').css("display","block");
+}
+
+function pop2() {
+	$('.ref').css("display","block");
+	$('.close2').css("display","block");
+	$('.pop2').css("display","none");
+}
+
+function close2() {
+	$('.ref').css("display","none");
+	$('.close2').css("display","none");
+	$('.pop2').css("display","block");
 }
 
 
+$(document).on("touchstart",".homebtn" , function (event) {
+         open_page("",1);
+        });
+$(document).on("touchstart",".sumbtn" , function (event) {
+         open_page("",7);
+        });
+		
+		
+		
 function kol() {
 	$('video').css("display","block");
 	$('.closekol').css("display","block");
@@ -583,4 +593,17 @@ function closekol() {
 	var vid = document.getElementById("myVideo");
 	vid.pause();
 	vid.currentTime = 0;
+}
+
+function startAnime() {
+	$('.s1_3').css("display","none");
+	$('.s1_4').css("display","block");
+	$('.s1_5').css("display","block");
+	$('.s1_6').css("display","block");
+	$('#s1_6').css("display","block");
+	$('.s1_7').css("display","block");
+	$('.s1_8').css("display","block");
+	$('.s1_9').css("display","block");
+	$('.zoomWrap').addClass("zoomWrapOut");
+	$('.s1_10').css("display","block");
 }
