@@ -12,8 +12,8 @@ var currentContentNSlide ='';
 //alert("++++++++++++"+custcomslideflag1+"+++++++custcomslideid+++++++"+custcomslideid1);
 	if (typeof(localStorage.getItem("currentcustomslideflag"))!='undefined' &&  localStorage.getItem("currentcustomslideflag") =='true'){
 		var custcomslideid1=parseInt(localStorage.getItem("currentcontentcustomslideId"));
+		
 		//step 2:
-
 		currentContentNSlide = currentContentId+"_"+contentName+"_"+custcomslideid1;
 		//step 2 ends here
 		localStorage.setItem("current",currentContentNSlide);
@@ -99,6 +99,7 @@ function touchHandler(e) {
 		console.log("swipeleft"+localStorage.getItem("currentslide"));
 		localStorage.setItem("previousslide",localStorage.getItem("currentslide"));
 		//step 4 ends here
+
 		//alert("swipeleft");
 		//myconsole("swipeleft");
 		var page_id =  parseInt($("#wrapper").attr("rel"));
@@ -116,6 +117,7 @@ function touchHandler(e) {
 		console.log("swiperight"+localStorage.getItem("currentslide"));
 		localStorage.setItem("previousslide",localStorage.getItem("currentslide"));
 		//step 5 ends here 
+
 			//alert("swiperight");
 		//myconsole("swiperight");
 		var page_id =  parseInt($("#wrapper").attr("rel"));
@@ -134,7 +136,10 @@ function touchHandler(e) {
         //Default is 75px, set to 0 for demo so any distance triggers swipe
          threshold:0
 	});
+
+
 });
+
 
 //step 6:-
 function toCaptureTime(page_id){
@@ -149,39 +154,31 @@ function toCaptureTime(page_id){
 	if(temp == null){
 		
 		if (currentSlideNo!=0){
+
+
+
 			localStorage.setItem(currentContentId+"_"+contentName+"_slideNo_"+currentSlideNo ,startTime);
 
 			//to capture start time of slide in db format
 			var startTimeInDBFormat = currentTimeInDatabaseFormat();
 			//alert(startTimeInDBFormat);
 
+
+
+
 			localStorage.setItem(currentContentId+"_"+contentName+"_StartTime_"+currentSlideNo ,startTimeInDBFormat);
 		}
 }
 else
 {
-
 var existingTime = localStorage.getItem(currentContentId+"_"+contentName+"_slideNo_"+currentSlideNo);
 var newTime = Date.now();
 var newSlideTime = (newTime - existingTime);
-
-// alert(currentSlideNo + " slide time : " + (newSlideTime/1000) ); // time taken to view that particular slide
-
-//to capture end time of slide in db format
 var endTimeInDBFormat = currentTimeInDatabaseFormat();
-//alert(endTimeInDBFormat);/* 
-/* 
-alert('do calculations and update time====else==_EndTime_======'); */
-
-
 var EndTimeNext = localStorage.getItem(currentContentId+"_"+contentName+"_EndTime_"+currentSlideNo);
 console.log("++++++++EndTimeNext++++++++"+EndTimeNext+"++++++currentContentId+++"+currentContentId+"_"+contentName+"_EndTime_"+currentSlideNo);
 if(EndTimeNext == null){
-	//this time for which the slide was viewed
-
-
 localStorage.setItem(currentContentId+"_"+contentName+"_totalTime_slideNo_"+currentSlideNo ,(newSlideTime/1000) );
-
 
 localStorage.setItem(currentContentId+"_"+contentName+"_EndTime_"+currentSlideNo ,endTimeInDBFormat);
 }
@@ -193,12 +190,10 @@ if (typeof(localStorage.getItem('currentslide'))!='undefined' && localStorage.ge
 
 }else{
 
-
 	var nextSlideNo = currentSlideNo + 1 ;
 	
  } 
- 
-	if(nextSlideNo <= 3){//number 3 is number of total slides present
+	if(nextSlideNo <= 1){//number 3 is number of total slides present
 	// alert(nextSlideNo);
 	var tempNext = localStorage.getItem(currentContentId+"_"+contentName+"_slideNo_"+nextSlideNo);
 
@@ -208,38 +203,28 @@ if (typeof(localStorage.getItem('currentslide'))!='undefined' && localStorage.ge
 				var nextSlideStartTime =  Date.now();
 				localStorage.setItem(currentContentId+"_"+contentName+"_slideNo_"+nextSlideNo ,nextSlideStartTime);
 				localStorage.setItem(currentContentId+"_"+contentName+"_totalTime_slideNo_"+nextSlideNo ,0);
-
-
-
 				//to capture start time of next slide in db format
 				var startTimeNextInDBFormat = currentTimeInDatabaseFormat();
-				//alert(startTimeNextInDBFormat);
-				/* 
-				alert("+++else++_StartTime_++++currentSlideNo++++"+nextSlideNo); */
 				localStorage.setItem(currentContentId+"_"+contentName+"_StartTime_"+nextSlideNo ,startTimeNextInDBFormat);
 			}
 		}
 	}
 }
 
+
 }
-//step ends..
+//step 6 ends here ..
 
 
 function go_nav(direction) {
-	//alert("+++++++++go_nav++++++++++"+direction);
-	//alert("+++++++++go_nav++++contentName++++++"+contentName);
-	//go_nav('b');right
-	//go_nav('f');left
+
 	
 //custom slide changes continues here....
 	
 	if (typeof(localStorage.getItem("currentcustomslideflag"))!='undefined' &&   localStorage.getItem("currentcustomslideflag") =='true'){
 
-			
 				var custcomslideid=parseInt(localStorage.getItem("currentcontentcustomslideId"));
 			
-				
 				var page_id =  custcomslideid;
 		}else{
 			
@@ -252,7 +237,7 @@ function go_nav(direction) {
 	//toCaptureTime(page_id);
 	console.log("swipeleft"+localStorage.getItem("currentslide"));
 	localStorage.setItem("previousslide",localStorage.getItem("currentslide"));
-	//step 7 ends here
+	//step 7 ends here 
 //localStorage.setItem(contentName+"_slideNo_"+currentSlideNo ,n);
 var flag=0;
 if(direction == 'b') {
@@ -266,28 +251,18 @@ if(direction == 'b') {
 		window.location = "js-call:" + "1" + ":" + encodeURIComponent(JSON.stringify({query:'NODATA', type:'brandNavigation', callback:'checkLastPgFn'}));
 
 
-	}
+	}else{
+	if(page_id == 1){
+	localStorage.setItem("gotoNextPrevBrand" ,2);//if one than next if 2 than prev
+	window.location = "js-call:" + "1" + ":" + encodeURIComponent(JSON.stringify({query:'NODATA', type:'brandNavigation', callback:'checkLastPgFn'}));
+
+
+}else{
+	localStorage.setItem("gotoNextPrevBrand" ,0);//if one than next if 2 than prev
+}
+}
 	
 //custom slide changes ends here....
-
-	else{
-	if(page_id >= 0){
-		page_id = page_id - 1;
-		//alert(page_id);
-		//console.log(page_id);
-		if(page_id == 0){
-            flag=2;
-        }
-	}
-	 if(flag == 2){
-        localStorage.setItem("gotoNextPrevBrand" ,2);//if one than next if 2 than prev
-        //flag == 0;
-		window.location = "js-call:" + "1" + ":" + encodeURIComponent(JSON.stringify({query:'NODATA', type:'brandNavigation', callback:'checkLastPgFn'}));
-    }else{
-        localStorage.setItem("gotoNextPrevBrand" ,0);
-    }
-
-	}
 }else {
 	
 //custom slide changes continues here....
@@ -300,28 +275,21 @@ if(direction == 'b') {
 	}
 	
 //custom slide changes ends here....
+else{
+	if(page_id == 1){
+	 localStorage.setItem("gotoNextPrevBrand" ,1);//if one than next if 2 than prev
+	 window.location = "js-call:" + "1" + ":" + encodeURIComponent(JSON.stringify({query:'NODATA', type:'brandNavigation', callback:'checkLastPgFn'}));
+}else{
 
-	else{
-	if(page_id <= 3){
-		page_id = page_id + 1;
-		//alert(page_id);
-		if(page_id == 4){
-            flag=1;
-        }
+
+
+	localStorage.setItem("gotoNextPrevBrand" ,0);//if one than next if 2 than prev
+}
 	}
-	    if(flag == 1){
-        localStorage.setItem("gotoNextPrevBrand" ,1);//if one than next if 2 than prev
-         flag == 0;
-		 window.location = "js-call:" + "1" + ":" + encodeURIComponent(JSON.stringify({query:'NODATA', type:'brandNavigation', callback:'checkLastPgFn'}));
-    }else{
-        localStorage.setItem("gotoNextPrevBrand" ,0);
-    }
-
 }
-}
-
 
 //step 8:
+
 currentContentNSlide = currentContentId+"_"+contentName+"_"+page_id;
 //step 8 ends here
 localStorage.setItem("current",currentContentNSlide);
@@ -364,10 +332,7 @@ var pg_content = set_pg_content(page_id);
 }
 
 function set_pg_content(pg_id){
-//step 6:-
-//console.log("++++++++pg_id++++"+pg_id+"+++++++currentslide++++++"+localStorage.getItem("currentslide")+"++++++previousslide++++++"+localStorage.getItem("previousslide"));
-		 //check previous slide id end time capture...@bramha..
-		 //check previous slide id end time capture...@bramha..
+//alert("++++++++++set_pg_content++++++++++"+pg_id);
 	//step 9:
 	if (typeof(localStorage.getItem("previousslide"))!='undefined'){
 		//to checked previous slide has god end time...
@@ -376,23 +341,15 @@ function set_pg_content(pg_id){
 		
 	}
 	toCaptureTime(pg_id);
-
-
 	//step 9 ends here..
-//alert("++++++++++set_pg_content++++++++++"+pg_id);
 $(".reference").removeClass("active");
 currentSlide();
 var selectedContentPath='';
 switch(pg_id){
 	case 1:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="s1_1"><img src="slide1/s1_1.png"/></div><div class="zoomWrap"><div class="s1_2"><img src="slide1/s1_2.png"/></div><div class="s1_3" onclick="startAnime();"><img src="slide1/s1_3.png"/></div><div class="s1_4"><img src="slide1/s1_4.png"/></div><div class="s1_5"><img src="slide1/s1_5.png"/></div><div class="s1_6"><img id="s1_6" src="slide1/s1_6.png"/></div><div class="s1_7"><img src="slide1/s1_7.png"/></div><div class="s1_8"><img src="slide1/s1_8.png"/></div><div class="s1_9"><img src="slide1/s1_9.png"/></div></div><div class="s1_10"><img src="slide1/s1_10.png"/></div>';
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="clip1"><video id="clip1" width="1024" height="768" onended="showSwitch1();" autoplay><source src="slide1/Clip1.mp4" type="video/mp4"></video></div><div class="clip2"><video id="clip2" width="1024" height="768" onended="showSwitch2();"><source src="slide1/Clip2.mp4" type="video/mp4"></video></div><div class="clip3"><video id="clip3" width="1024" height="768" onended="showSwitch3();"><source src="slide1/Clip3.mp4" type="video/mp4"></video></div><div class="clip4"><video id="clip4" width="1024" height="768" onended="showSwitch4();"><source src="slide1/Clip4.mp4" type="video/mp4"></video></div><div class="clip5"><video id="clip5" width="1024" height="768"><source src="slide1/Clip5.mp4" type="video/mp4"></video></div><div class="switch1" onclick="switch1();"></div><div class="switch2" onclick="switch2();"></div><div class="switch3" onclick="switch3();"></div><div class="switch4" onclick="switch4();"></div>';
 	break;
-	case 2:
-	content='<link rel="stylesheet" type="text/css" href="slide2/slide3.css" media="screen"/><div class="s3_1"><img src="slide2/s3_1.png"/></div><div class="s3_2"><img src="slide2/s3_2.png"/></div><div class="s3_3"><img src="slide2/s3_3.gif"/></div>';
-	break;
-    case 3:
-	content='<link rel="stylesheet" type="text/css" href="slide3/slide4.css" media="screen"/><div class="s4_1"><img src="slide3/s4_1.png"/></div><div class="s4_2"><img src="slide3/s4_2.png"/></div><div class="s4_3"><img src="slide3/s4_3.gif"/></div><div class="s4_4"><img src="slide3/s4_4.png"/></div><div class="s4_5"><img src="slide3/s4_5.png"/></div><div class="s4_6"><img src="slide3/s4_6.png"/></div><div class="s4_7"><img src="slide3/s4_7.png"/></div><div class="s4_8"><img src="slide3/s4_8.png"/></div><div class="s4_9"><img src="slide3/s4_9.png"/></div><div class="kol" onclick="kol();"></div><video id="myVideo" width="1024" height="768" src="slide3/s4_12.mp4" controls></video><div class="closekol" onclick="closekol();"><img src="slide3/s4_13.png"></div>';
-	break;
+
 }
 
 return content;
@@ -406,15 +363,13 @@ function showDiv2() {
    document.getElementById('welcomeDiv2').style.display = "block";
 }
 
-
 function open_page(url,page_id){
 	 // alert(page_id);
 	//step 10:
 	if (typeof(localStorage.getItem("currentslide"))!='undefined'){
 		//to checked previous slide has god end time...
 		var slideid=localStorage.getItem("currentslide");
-		toCaptureTime(slideid);
-		
+		toCaptureTime(slideid);	
 	}
 	
 	// toCaptureTime(page_id);
@@ -462,22 +417,16 @@ function open_page(url,page_id){
 
 	if(currentslide == 1){
 	document.getElementById("click_through").innerHTML='';
-		$('.pop1, .pop2, .homebtn').css("display","none");
-	}
+		}
     if(currentslide == 2){
 	document.getElementById("click_through").innerHTML='';
-		$('.pop1, .pop2, .homebtn').css("display","block");
+		}
 	}
-	if(currentslide == 3){
-	document.getElementById("click_through").innerHTML='';
-		$('.pop1, .pop2, .homebtn').css("display","block");
-	}
-}
 
 	function checkBtns(refNum){
 		switch(refNum){
 			case 1:
-			open_page('',3);
+			open_page('',1);
             break;
 		}
 	}
@@ -528,6 +477,8 @@ function currentTimeInDatabaseFormat(){//to get current time in dd-mm-yyyy hh:mm
 	return duration;
 }
 
+// new js
+
 $(document).ready(function(){
 	$('body').on('click','.touchbtn',function(){
 		$('.right_arrow').trigger( "click" );
@@ -539,66 +490,51 @@ $(document).ready(function(){
 	})
 })
 
-/*--------------------- animation javascript -----------------------*/
 
-function pop1() {
-	$('.api').css("display","block");
-	$('.c1ose1').css("display","block");
-	$('.pop1').css("display","none");
+//------------------------------------------//
+
+
+function showSwitch1() {
+	 $(".switch1").css("display","block");
 }
 
-function close1() {
-	$('.api').css("display","none");
-	$('.c1ose1').css("display","none");
-	$('.pop1').css("display","block");
+function switch1() {
+	 $(".clip2").css("display","block");
+	 var vid = document.getElementById("clip2");
+	 vid.currentTime = 0;
+	 vid.play();
 }
 
-function pop2() {
-	$('.ref').css("display","block");
-	$('.close2').css("display","block");
-	$('.pop2').css("display","none");
+function showSwitch2() {
+	 $(".switch2").css("display","block");
 }
 
-function close2() {
-	$('.ref').css("display","none");
-	$('.close2').css("display","none");
-	$('.pop2').css("display","block");
+function switch2() {
+	 $(".clip3").css("display","block");
+	 var vid = document.getElementById("clip3");
+	 vid.currentTime = 0;
+	 vid.play();
+}
+
+function showSwitch3() {
+	 $(".switch3").css("display","block");
+}
+
+function switch3() {
+	 $(".clip4").css("display","block");
+	 var vid = document.getElementById("clip4");
+	 vid.currentTime = 0;
+	 vid.play();
 }
 
 
-$(document).on("touchstart",".homebtn" , function (event) {
-         open_page("",1);
-        });
-$(document).on("touchstart",".sumbtn" , function (event) {
-         open_page("",7);
-        });
-		
-		
-		
-function kol() {
-	$('video').css("display","block");
-	$('.closekol').css("display","block");
-	document.getElementById("myVideo").play();
+function showSwitch4() {
+	 $(".switch4").css("display","block");
 }
 
-function closekol() {
-	$('video').css("display","none");
-	$('.closekol').css("display","none");
-	var vid = document.getElementById("myVideo");
-	vid.pause();
-	vid.currentTime = 0;
-}
-
-function startAnime() {
-	$('.s1_3').css("display","none");
-	$('.s1_4').css("display","block");
-	$('.s1_5').css("display","block");
-	$('.s1_6').css("display","block");
-	$('#s1_6').css("display","block");
-	$('#s1_6').addClass("dragIn");
-	$('.s1_7').css("display","block");
-	$('.s1_8').css("display","block");
-	$('.s1_9').css("display","block");
-	$('.zoomWrap').addClass("zoomWrapOut");
-	$('.s1_10').css("display","block");
+function switch4() {
+	 $(".clip5").css("display","block");
+	 var vid = document.getElementById("clip5");
+	 vid.currentTime = 0;
+	 vid.play();
 }
