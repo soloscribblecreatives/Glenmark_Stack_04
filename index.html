@@ -5,7 +5,7 @@
 <meta http-equiv="cache-control" content="max-age=200"/>
 <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
 <meta http-equiv="X-UA-Compatible" content="chrome=1">
-<title>Lupivor</title>
+<title>Telma-Beta</title>
 <link rel="stylesheet" type="text/css" href="animate.css" media="screen"/>
 <link rel="stylesheet" type="text/css" href="global.css" media="screen"/>
 
@@ -64,7 +64,7 @@ if (typeof(localStorage.getItem("currentcustomslideflag"))!='undefined' && local
 	
 	switch(custcomslideid){
 		case 1:
-		content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"><video width="1024" height="768" controls autoplay><source src="slide1/1.mp4" type="video/mp4"></video>';
+		content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="clip1"><video id="clip1" width="1024" height="768" onended="showSwitch1();" autoplay><source src="slide1/Clip1.mp4" type="video/mp4"></video></div><div class="clip2"><video id="clip2" width="1024" height="768" onended="showSwitch2();"><source src="slide1/Clip2.mp4" type="video/mp4"></video></div><div class="clip3"><video id="clip3" width="1024" height="768" onended="showSwitch3();"><source src="slide1/Clip3.mp4" type="video/mp4"></video></div><div class="clip4"><video id="clip4" width="1024" height="768" onended="showSwitch4();"><source src="slide1/Clip4.mp4" type="video/mp4"></video></div><div class="clip5"><video id="clip5" width="1024" height="768"><source src="slide1/Clip5.mp4" type="video/mp4"></video></div><div class="switch1" onclick="switch1();"></div><div class="switch2" onclick="switch2();"></div><div class="switch3" onclick="switch3();"></div><div class="switch4" onclick="switch4();"></div>';
 		break;
 	}
 
