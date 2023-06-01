@@ -347,7 +347,7 @@ currentSlide();
 var selectedContentPath='';
 switch(pg_id){
 	case 1:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="clip1"><video id="clip1" width="1024" height="768" onended="showSwitch1();" autoplay><source src="slide1/Clip1.mp4" type="video/mp4"></video></div><div class="clip2"><video id="clip2" width="1024" height="768" onended="showSwitch2();"><source src="slide1/Clip2.mp4" type="video/mp4"></video></div><div class="clip3"><video id="clip3" width="1024" height="768" onended="showSwitch3();"><source src="slide1/Clip3.mp4" type="video/mp4"></video></div><div class="clip4"><video id="clip4" width="1024" height="768" onended="showSwitch4();"><source src="slide1/Clip4.mp4" type="video/mp4"></video></div><div class="clip5"><video id="clip5" width="1024" height="768"><source src="slide1/Clip5.mp4" type="video/mp4"></video></div><div class="switch1" onclick="switch1();"></div><div class="switch2" onclick="switch2();"></div><div class="switch3" onclick="switch3();"></div><div class="switch4" onclick="switch4();"></div>';
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"></div><div class="video1"><video preload="auto" autoplay onplay="myFunction()" id="startVideo" width="1024" height="768"><source src="slide1/Part1.mp4" type="video/mp4"></video></div><div class="button"></div><div class="video2"><video id="endVideo" width="1024" height="768"><source src="slide1/Part2.mp4" type="video/mp4"></video></div>';
 	break;
 
 }
@@ -490,51 +490,32 @@ $(document).ready(function(){
 	})
 })
 
+/*--------------------------Javascript Animation-----------------------------*/
 
-//------------------------------------------//
+function myFunction(){
+	setTimeout(function () {
+		$('.button').css("display","block");
+	}, 1000);
+};
 
+$(document).ready(function(){
+	$(document).on('click','.button',function(){
+		$('.button').css("display","none");
+		$(this).hide();
+		$(".video2").show();
+		var video1 = $("#startVideo").get(0);
+    	video1.pause();
+		var video2 = $("#endVideo").get(0);
+    	video2.play();
+	})
+})	
 
-function showSwitch1() {
-	 $(".switch1").css("display","block");
-}
-
-function switch1() {
-	 $(".clip2").css("display","block");
-	 var vid = document.getElementById("clip2");
-	 vid.currentTime = 0;
-	 vid.play();
-}
-
-function showSwitch2() {
-	 $(".switch2").css("display","block");
-}
-
-function switch2() {
-	 $(".clip3").css("display","block");
-	 var vid = document.getElementById("clip3");
-	 vid.currentTime = 0;
-	 vid.play();
-}
-
-function showSwitch3() {
-	 $(".switch3").css("display","block");
-}
-
-function switch3() {
-	 $(".clip4").css("display","block");
-	 var vid = document.getElementById("clip4");
-	 vid.currentTime = 0;
-	 vid.play();
-}
-
-
-function showSwitch4() {
-	 $(".switch4").css("display","block");
-}
-
-function switch4() {
-	 $(".clip5").css("display","block");
-	 var vid = document.getElementById("clip5");
-	 vid.currentTime = 0;
-	 vid.play();
-}
+/* 
+$(document).ready(function() {
+	var vid = document.getElementById("startVideo");
+    vid.addEventListener("timeupdate", function() {
+		if(vid.currentTime=5) {
+			$(".button").show();
+		}
+	});
+}); */

@@ -3,81 +3,34 @@
 	padding: 0px;
 }
 
-.clip1 {
+.background {
 	position: absolute;
 	width: 1024px;
 	height: 768px;
 	z-index: 1;
 }
 
-.switch1 {
-	position: absolute;
-  left: 583px;
-  top: 589px;
-  width: 241px;
-  height: 179px;
-	display: none;
-	z-index: 2;
-}
-
-.clip2 {
+.video1 {
 	position: absolute;
 	width: 1024px;
-	height: 768px;
-	display: none;
-	z-index: 3;
+	height: 670px;
+	z-index:5;
 }
 
-.switch2 {
+.button {
 	position: absolute;
-  left: 65px;
-  top: 558px;
-  width: 243px;
-  height: 210px;
+    left: 729px;
+    top: 466px;
+    width: 295px;
+    height: 302px;
 	display: none;
-	z-index: 4;
+	z-index: 999;
 }
 
-.clip3 {
-	position: absolute;
-	width: 1024px;
-	height: 768px;
-	display: none;
-	z-index: 5;
-}
-
-.switch3 {
-	position: absolute;
-  left: 455px;
-  top: 550px;
-  width: 269px;
-  height: 218px;
-	display: none;
-	z-index: 6;
-}
-
-.clip4 {
+.video2 {
 	position: absolute;
 	width: 1024px;
-	height: 768px;
+	height: 670px;
 	display: none;
-	z-index: 7;
-}
-
-.switch4 {
-	position: absolute;
-  left: 0px;
-  top: 548px;
-  width: 266px;
-  height: 220px;
-	display: none;
-	z-index: 8;
-}
-
-.clip5 {
-	position: absolute;
-	width: 1024px;
-	height: 768px;
-	display: none;
-	z-index: 9;
+	z-index:10;
 }
