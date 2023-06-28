@@ -347,7 +347,7 @@ currentSlide();
 var selectedContentPath='';
 switch(pg_id){
 	case 1:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"></div><div class="video1"><video preload="auto" autoplay onplay="myFunction()" id="startVideo" width="1024" height="768"><source src="slide1/Part1.mp4" type="video/mp4"></video></div><div class="button"></div><div class="video2"><video id="endVideo" width="1024" height="768"><source src="slide1/Part2.mp4" type="video/mp4"></video></div>';
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"></div><div class="button1" onclick="playVid1()"></div><div class="video1"><video onended="myFunction()" poster="slide1/Poster.png" id="startVideo" width="1024" height="768"><source src="slide1/Part1.mp4" type="video/mp4"></video></div><div class="button2" onclick="playVid2()"><img src="slide1/Restore.png"></div><div class="video2"><video id="endVideo" width="1024" height="768"><source src="slide1/Part2.mp4" type="video/mp4"></video></div>';
 	break;
 
 }
@@ -492,30 +492,21 @@ $(document).ready(function(){
 
 /*--------------------------Javascript Animation-----------------------------*/
 
-function myFunction(){
-	setTimeout(function () {
-		$('.button').css("display","block");
-	}, 1000);
+function playVid1() {
+	document.getElementById("startVideo").play();
+	$('.button1').css("display","none");
+}
+
+function myFunction() {
+	$('.button2').css("display","block");
 };
 
-$(document).ready(function(){
-	$(document).on('click','.button',function(){
-		$('.button').css("display","none");
-		$(this).hide();
-		$(".video2").show();
-		var video1 = $("#startVideo").get(0);
-    	video1.pause();
-		var video2 = $("#endVideo").get(0);
-    	video2.play();
-	})
-})	
-
-/* 
-$(document).ready(function() {
+function playVid2() {
+	$('.button2').css("display","none");
+	$(".video1").css("display","none");
 	var vid = document.getElementById("startVideo");
-    vid.addEventListener("timeupdate", function() {
-		if(vid.currentTime=5) {
-			$(".button").show();
-		}
-	});
-}); */
+	vid.pause();
+	vid.currentTime = 0;
+	$(".video2").css("display","block");
+	document.getElementById("endVideo").play();
+};

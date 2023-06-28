@@ -17,13 +17,25 @@
 	z-index:5;
 }
 
-.button {
+.button1 {
 	position: absolute;
-    left: 729px;
-    top: 466px;
-    width: 295px;
-    height: 302px;
+  left: 0px;
+  top: 97px;
+  width: 394px;
+  height: 408px;
+	z-index: 999;
+}
+
+.button2 {
+	position: absolute;
+  left: 644px;
+  top: 60px;
+  width: 396px;
+  height: 282px;
 	display: none;
+	animation: slideInDown 0.5s;
+    animation-delay: 0s;
+    animation-fill-mode: both;
 	z-index: 999;
 }
 
