@@ -347,7 +347,7 @@ currentSlide();
 var selectedContentPath='';
 switch(pg_id){
 	case 1:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"></div><div class="button1" onclick="playVid1()"></div><div class="video1"><video onended="myFunction()" poster="slide1/Poster.png" id="startVideo" width="1024" height="768"><source src="slide1/Part1.mp4" type="video/mp4"></video></div><div class="button2" onclick="playVid2()"><img src="slide1/Restore.png"></div><div class="video2"><video id="endVideo" width="1024" height="768"><source src="slide1/Part2.mp4" type="video/mp4"></video></div>';
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="button1" onclick="playVid1()"></div><div class="video1"><video onended="myFunction1()" poster="slide1/Poster.png" id="startVideo" width="1024" height="768"><source src="slide1/Part1.mp4" type="video/mp4"></video></div><div class="button2" onclick="playVid2()"><img src="slide1/Restore.png"></div><div class="video2"><video onended="myFunction2()" id="break1" width="1024" height="768"><source src="slide1/Part2.mp4" type="video/mp4"></video></div><div class="button3" onclick="playVid3()"><img src="slide1/Restore.png"></div><div class="video3"><video onended="myFunction3()" id="break2" width="1024" height="768"><source src="slide1/Part3.mp4" type="video/mp4"></video></div><div class="button4" onclick="playVid4()"><img src="slide1/Restore.png"></div><div class="video4"><video onended="myFunction4()" id="break3" width="1024" height="768"><source src="slide1/Part4.mp4" type="video/mp4"></video></div><div class="button5" onclick="playVid5()"><img src="slide1/Restore.png"></div><div class="video5"><video id="endVideo" width="1024" height="768"><source src="slide1/Part5.mp4" type="video/mp4"></video></div>';
 	break;
 
 }
@@ -497,7 +497,7 @@ function playVid1() {
 	$('.button1').css("display","none");
 }
 
-function myFunction() {
+function myFunction1() {
 	$('.button2').css("display","block");
 };
 
@@ -508,5 +508,47 @@ function playVid2() {
 	vid.pause();
 	vid.currentTime = 0;
 	$(".video2").css("display","block");
+	document.getElementById("break1").play();
+};
+
+function myFunction2() {
+	$('.button3').css("display","block");
+};
+
+function playVid3() {
+	$('.button3').css("display","none");
+	$(".video2").css("display","none");
+	var vid = document.getElementById("break1");
+	vid.pause();
+	vid.currentTime = 0;
+	$(".video3").css("display","block");
+	document.getElementById("break2").play();
+};
+
+function myFunction3() {
+	$('.button4').css("display","block");
+};
+
+function playVid4() {
+	$('.button4').css("display","none");
+	$(".video3").css("display","none");
+	var vid = document.getElementById("break2");
+	vid.pause();
+	vid.currentTime = 0;
+	$(".video4").css("display","block");
+	document.getElementById("break3").play();
+};
+
+function myFunction4() {
+	$('.button5').css("display","block");
+};
+
+function playVid5() {
+	$('.button5').css("display","none");
+	$(".video4").css("display","none");
+	var vid = document.getElementById("break3");
+	vid.pause();
+	vid.currentTime = 0;
+	$(".video5").css("display","block");
 	document.getElementById("endVideo").play();
 };
