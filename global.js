@@ -684,7 +684,7 @@ function open_page2(url,page_id,count){
 	}
 	
 	if(currentslide == 9){
-		document.getElementById("click_through").innerHTML='<video id="vidPlay" onended="checkBtns(9);" width="1024" height="768" controls autoplay><source src="slide9/1.mp4" type="video/mp4"></video>';
+		document.getElementById("click_through").innerHTML='<video id="vidPlay" onended="checkBtns(10);" width="1024" height="768" controls autoplay><source src="slide9/1.mp4" type="video/mp4"></video>';
 	}
 	
 	if(currentslide == 12){
