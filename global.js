@@ -444,11 +444,11 @@ function open_page2(url,page_id,count){
 		if(currentslide == 2){
 		document.getElementById("click_through").innerHTML='<div class="blocker"></div><div class="slide02_inline_wraper" id="buttons"><div class="slide01_home_btn_mask" onclick="checkBtns(3)"></div>\
 			<div id="slide01_question01_choices01" class="control-group">\
-			<label class="control control_radio"><div class="lbl_pos"></div><input type="radio" id="slide01_radio01_01" name="checkB01" value="1"/><div class="control_indicator"id="radio01" onclick="select1()"></div></label>\
-			<label class="control control_radio"><div class="lbl_pos"></div><input type="radio" id="slide01_radio01_02" name="checkB01" value="2"/><div class="control_indicator"id="radio02" onclick="select2()"></div></label>\
-			<label class="control control_radio"><div class="lbl_pos"></div><input type="radio" id="slide01_radio01_03" name="checkB01" value="3"/><div class="control_indicator"id="radio03" onclick="select3()"></div></label>\
-			<label class="control control_radio"><div class="lbl_pos"></div><input type="radio" id="slide01_radio01_04" name="checkB01" value="4"/><div class="control_indicator"id="radio04" onclick="select4()"></div></label>\
-			<label class="control control_radio"><div class="lbl_pos"></div><input type="radio" id="slide01_radio01_05" name="checkB01" value="5"/><div class="control_indicator"id="radio05" onclick="select5()"></div></label>\
+			<label class="control control_radio"><div class="lbl_pos"></div><input type="radio" id="slide01_radio01_01" name="checkB01" value="1 star"/><div class="control_indicator"id="radio01" onclick="select1()"></div></label>\
+			<label class="control control_radio"><div class="lbl_pos"></div><input type="radio" id="slide01_radio01_02" name="checkB01" value="2 stars"/><div class="control_indicator"id="radio02" onclick="select2()"></div></label>\
+			<label class="control control_radio"><div class="lbl_pos"></div><input type="radio" id="slide01_radio01_03" name="checkB01" value="3 stars"/><div class="control_indicator"id="radio03" onclick="select3()"></div></label>\
+			<label class="control control_radio"><div class="lbl_pos"></div><input type="radio" id="slide01_radio01_04" name="checkB01" value="4 stars"/><div class="control_indicator"id="radio04" onclick="select4()"></div></label>\
+			<label class="control control_radio"><div class="lbl_pos"></div><input type="radio" id="slide01_radio01_05" name="checkB01" value="5 stars"/><div class="control_indicator"id="radio05" onclick="select5()"></div></label>\
 			</div>\
 			<div class="submit_button" onclick="savedata(1,1,2);endTime1(2);hidesubmitonclick();checkBtns(3);"></div></div></div>';  
 		$('#slide01_question01_choices01').delay(10).fadeIn();
@@ -558,11 +558,11 @@ function open_page2(url,page_id,count){
 	if(currentslide == 8){
 		document.getElementById("click_through").innerHTML='<div class="blocker"></div><div class="slide02_inline_wraper" id="buttons"><div class="slide01_home_btn_mask" onclick="checkBtns(3)"></div>\
 			<div id="slide01_question01_choices01" class="control-group">\
-			<label class="control control_radio"><div class="lbl_pos"></div><input type="radio" id="slide01_radio01_01" name="checkB01" value="1"/><div class="control_indicator"id="radio01" onclick="select1()"></div></label>\
-			<label class="control control_radio"><div class="lbl_pos"></div><input type="radio" id="slide01_radio01_02" name="checkB01" value="2"/><div class="control_indicator"id="radio02" onclick="select2()"></div></label>\
-			<label class="control control_radio"><div class="lbl_pos"></div><input type="radio" id="slide01_radio01_03" name="checkB01" value="3"/><div class="control_indicator"id="radio03" onclick="select3()"></div></label>\
-			<label class="control control_radio"><div class="lbl_pos"></div><input type="radio" id="slide01_radio01_04" name="checkB01" value="4"/><div class="control_indicator"id="radio04" onclick="select4()"></div></label>\
-			<label class="control control_radio"><div class="lbl_pos"></div><input type="radio" id="slide01_radio01_05" name="checkB01" value="5"/><div class="control_indicator"id="radio05" onclick="select5()"></div></label>\
+			<label class="control control_radio"><div class="lbl_pos"></div><input type="radio" id="slide01_radio01_01" name="checkB01" value="1 star"/><div class="control_indicator"id="radio01" onclick="select1()"></div></label>\
+			<label class="control control_radio"><div class="lbl_pos"></div><input type="radio" id="slide01_radio01_02" name="checkB01" value="2 stars"/><div class="control_indicator"id="radio02" onclick="select2()"></div></label>\
+			<label class="control control_radio"><div class="lbl_pos"></div><input type="radio" id="slide01_radio01_03" name="checkB01" value="3 stars"/><div class="control_indicator"id="radio03" onclick="select3()"></div></label>\
+			<label class="control control_radio"><div class="lbl_pos"></div><input type="radio" id="slide01_radio01_04" name="checkB01" value="4 stars"/><div class="control_indicator"id="radio04" onclick="select4()"></div></label>\
+			<label class="control control_radio"><div class="lbl_pos"></div><input type="radio" id="slide01_radio01_05" name="checkB01" value="5 stars"/><div class="control_indicator"id="radio05" onclick="select5()"></div></label>\
 			</div>\
 			<div class="submit_button" onclick="savedata(1,1,8);endTime1(8);hidesubmitonclick();checkBtns(9);"></div></div></div>';  
 		$('#slide01_question01_choices01').delay(10).fadeIn();
