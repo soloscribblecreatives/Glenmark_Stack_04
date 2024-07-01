@@ -10,127 +10,52 @@
 	z-index: 1;
 }
 
-#vidPlay {
+.video1 {
 	position: absolute;
 	width: 1024px;
 	height: 768px;
-	z-index: 5;
+	z-index:5;
 }
 
-.bullet1 {
+.button1 {
 	position: absolute;
-  left: 331px;
-  top: 290px;
-  width: 232px;
-  height: 65px;
-  	animation: bounceIn 0.3s;
-	animation-delay: 0.1s;
-	animation-fill-mode: both;
-	z-index: 10;
+	width: 1024px;
+	height: 768px;
+	z-index: 50;
 }
 
-.bullet2 {
+.video2 {
 	position: absolute;
-  left: 651px;
-  top: 290px;
-  width: 232px;
-  height: 65px;
-    animation: bounceIn 0.3s;
-	animation-delay: 0.2s;
-	animation-fill-mode: both;
-	z-index: 10;
+	width: 1024px;
+	height: 768px;
+	display: none;
+	z-index:10;
 }
 
-.bullet3 {
+.button2 {
 	position: absolute;
-  left: 331px;
-  top: 387px;
-  width: 232px;
-  height: 65px;
-    animation: bounceIn 0.3s;
-	animation-delay: 0.3s;
-	animation-fill-mode: both;
-	z-index: 10;
+  left: 545px;
+  top: 481px;
+  width: 421px;
+  height: 287px;
+	display: none;
+	z-index: 55;
 }
 
-.bullet4 {
+.video3 {
 	position: absolute;
-  left: 651px;
-  top: 387px;
-  width: 232px;
-  height: 65px;
-    animation: bounceIn 0.3s;
-	animation-delay: 0.4s;
-	animation-fill-mode: both;
-	z-index: 10;
+	width: 1024px;
+	height: 768px;
+	display: none;
+	z-index:15;
 }
 
-.bullet5 {
+.button3 {
 	position: absolute;
-  left: 488px;
-  top: 484px;
-  width: 232px;
-  height: 65px;
-    animation: bounceIn 0.3s;
-	animation-delay: 0.5s;
-	animation-fill-mode: both;
-	z-index: 10;
-}
-
-
-
-
-.popVid1  {
-  position: absolute;
-  left: 57px;
-  top: 295px;
-  width: 432px;
-  height: 201px;
-  z-index: 10;
-}
-
-.popVid2  {
-  position: absolute;
-  left: 527px;
-  top: 295px;
-  width: 432px;
-  height: 201px;
-  z-index: 10;
-}
-
-.popVid3  {
-  position: absolute;
-  left: 57px;
-  top: 525px;
-  width: 432px;
-  height: 201px;
-  z-index: 10;
-}
-
-.popVid4  {
-  position: absolute;
-  left: 527px;
-  top: 525px;
-  width: 432px;
-  height: 201px;
-  z-index: 10;
-}
-
-
-
-
-.fadeHalf {
-  	animation: fadeHalf 0.5s;
-	animation-delay: 0s;
-	animation-fill-mode: both;
-}
-
-@keyframes fadeHalf {
-  0% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0.7;
-  }
+  left: 128px;
+  top: 229px;
+  width: 802px;
+  height: 520px;
+	display: none;
+	z-index: 50;
 }

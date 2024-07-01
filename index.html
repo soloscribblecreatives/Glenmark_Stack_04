@@ -1,69 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8"/>
-	<meta http-equiv="cache-control" content="max-age=200"/>
-	<meta name="viewport" content="initial-scale=1, maximum-scale=1" />
-	<meta http-equiv="X-UA-Compatible" content="chrome=1">
-	<title>Doctor Ralph</title>
-	<link rel="stylesheet" type="text/css" href="animate.css" media="screen"/>
-	<link rel="stylesheet" type="text/css" href="global.css" media="screen"/>
-	<script src="jquery.min.js" type="text/javascript" language="javascript"></script>
-	<script src="jquery.mobile.custom.min.js" type="text/javascript" language="javascript"></script>
-	<script src="jquery.touchSwipe.min.js" type="text/javascript" language="javascript"></script>
+<meta charset="UTF-8"/>
+<meta http-equiv="cache-control" content="max-age=200"/>
+<meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<title>Telma-CT</title>
+<link rel="stylesheet" type="text/css" href="animate.css" media="screen"/>
+<link rel="stylesheet" type="text/css" href="global.css" media="screen"/>
+
+<script src="jquery.min.js" type="text/javascript" language="javascript"></script>
+<script src="jquery.mobile.custom.min.js" type="text/javascript" language="javascript"></script>
+<script src="jquery.touchSwipe.min.js" type="text/javascript" language="javascript"></script>
 </head>
 
 <body>
 <div id="wrapper" rel="1">
-	<div class="home"><img src="slide1/Home.png"></div>
-	<div class="homeToggle" onclick="checkBtns(1);"></div>
-<!--   <div class="slide_arrow">
+  <div class="slide_arrow">
     <div class="left_arrow" ><img src="left_arrow.png" alt="previous icon" width="23" height="23" ></div>
     <div class="right_arrow" ><img src="right_arrow.png" alt="next icon" width="23" height="23"></div>
-  </div> -->
+  </div>
   <div id="main_content"></div>
   <div class="reference active">
     <div class="box">
       <div class="slide_jumper">
-		 <div class="slides"><img src="thumbs/01.png" alt=""></div>
-		 <div class="slides"><img src="thumbs/02.png" alt=""></div>
-		 <div class="slides"><img src="thumbs/03.png" alt=""></div>
-		 <div class="slides"><img src="thumbs/04.png" alt=""></div>
-		 <div class="slides"><img src="thumbs/05.png" alt=""></div>
-		 <div class="slides"><img src="thumbs/06.png" alt=""></div>
-		 <div class="slides"><img src="thumbs/07.png" alt=""></div>
-		 <div class="slides"><img src="thumbs/08.png" alt=""></div>
-		 <div class="slides"><img src="thumbs/09.png" alt=""></div>
-		 <div class="slides"><img src="thumbs/10.png" alt=""></div>
-		 <div class="slides"><img src="thumbs/11.png" alt=""></div>
-		 <div class="slides"><img src="thumbs/12.png" alt=""></div>
-		 <div class="slides"><img src="thumbs/13.png" alt=""></div>
+		  <div class="slides"><img src="thumbs/01.png" alt=""></div>
       </div>
     </div>
-    <!-- <div class="box_btn"></div> -->
+    <div class="box_btn"></div>
   </div>
-  <div id="click_through"></div>
-  <div id="myconsole"></div>
 </div>
-
-
+<div id="myconsole"></div>
+<div id="click_through"></div>
 <script src="global.js" type="text/javascript" language="javascript"></script> 
 <script>
 var startTime = Date.now();
+
 //step 1:
 var temp = localStorage.getItem(currentContentId+"_"+contentName+"_slideNo_1");
 	
-	if(temp == null){			
-
-
-			localStorage.setItem(currentContentId+"_"+contentName+"_slideNo_1" ,startTime);
-			localStorage.setItem(currentContentId+"_"+contentName+"_totalTime_slideNo_1",0);
-			//to capture start time of 1st slide in db format
-			var startTime1InDBFormat = currentTimeInDatabaseFormat();
-			//alert(startTime1InDBFormat);
-			localStorage.setItem(currentContentId+"_"+contentName+"_StartTime_1" ,startTime1InDBFormat);
-
-	
+	if(temp == null){
+		localStorage.setItem(currentContentId+"_"+contentName+"_slideNo_1" ,startTime);
+		localStorage.setItem(currentContentId+"_"+contentName+"_totalTime_slideNo_1",0);
+		//to capture start time of 1st slide in db format
+		var startTime1InDBFormat = currentTimeInDatabaseFormat();
+		//alert(startTime1InDBFormat);
+		localStorage.setItem(currentContentId+"_"+contentName+"_StartTime_1" ,startTime1InDBFormat);
 	}
 //step 1 ends here..
 
@@ -79,58 +61,21 @@ var selectedContentPath = 'slide1/';
 if (typeof(localStorage.getItem("currentcustomslideflag"))!='undefined' && localStorage.getItem("currentcustomslideflag") =='true'){
 	var custcomslideid = parseInt(localStorage.getItem("currentcontentcustomslideId")) ;
 	
-switch(custcomslideid){
-	case 1:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"><img src="slide1/1.jpg" width="1024" height="768" alt=""></div><div class="popVid1" onclick="checkBtns(2);"></div><div class="popVid2" onclick="checkBtns(5);"></div><div class="popVid3" onclick="checkBtns(8);"></div><div class="popVid4" onclick="checkBtns(11);"></div>';
-	break;
-	case 2:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"><img src="slide2/1.jpg" width="1024" height="768" alt=""></div><div class="bullet1"><img src="slide2/1.png"></div><div class="bullet2"><img src="slide2/2.png"></div><div class="bullet3"><img src="slide2/3.png"></div><div class="bullet4"><img src="slide2/4.png"></div><div class="bullet5"><img src="slide2/5.png"></div>';
-	break;
-	case 3:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"><img src="slide3/1.jpg" width="1024" height="768"></div>';
-	break;
-    case 4:
-	content='<link rel="stylesheet" type="text/css" href="slide4/slide1.css" media="screen"/><div class="background"><img src="slide4/1.jpg" width="1024" height="768" alt=""></div><div class="bullet1"><img src="slide4/1.png"></div><div class="bullet2"><img src="slide4/2.png"></div><div class="bullet3"><img src="slide4/3.png"></div>';
-	break;
-	case 5:
-	content='<link rel="stylesheet" type="text/css" href="slide4/slide1.css" media="screen"/><div class="background"><img src="slide5/1.jpg" width="1024" height="768" alt=""></div><div class="bullet1"><img src="slide5/1.png"></div><div class="bullet2"><img src="slide5/2.png"></div><div class="bullet3"><img src="slide5/3.png"></div>';
-	break;
-	case 6:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"><img src="slide3/1.jpg" width="1024" height="768"></div>';
-	break;
-	case 7:
-	content='<link rel="stylesheet" type="text/css" href="slide4/slide1.css" media="screen"/><div class="background"><img src="slide7/1.jpg" width="1024" height="768" alt=""></div><div class="bullet1"><img src="slide7/1.png"></div><div class="bullet2"><img src="slide7/2.png"></div><div class="bullet3"><img src="slide7/3.png"></div>';
-	break;
-	case 8:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"><img src="slide8/1.jpg" width="1024" height="768" alt=""></div><div class="bullet1"><img src="slide8/1.png"></div><div class="bullet2"><img src="slide8/2.png"></div><div class="bullet3"><img src="slide8/3.png"></div><div class="bullet4"><img src="slide8/4.png"></div><div class="bullet5"><img src="slide8/5.png"></div>';
-	break;
-	case 9:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"><img src="slide3/1.jpg" width="1024" height="768"></div>';
-	break;
-	case 10:
-	content='<link rel="stylesheet" type="text/css" href="slide4/slide1.css" media="screen"/><div class="background"><img src="slide10/1.jpg" width="1024" height="768" alt=""></div><div class="bullet1"><img src="slide4/1.png"></div><div class="bullet2"><img src="slide4/2.png"></div><div class="bullet3"><img src="slide4/3.png"></div>';
-	break;
-	case 11:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"><img src="slide11/1.jpg" width="1024" height="768" alt=""></div><div class="bullet1"><img src="slide11/1.png"></div><div class="bullet2"><img src="slide11/2.png"></div><div class="bullet3"><img src="slide11/3.png"></div><div class="bullet4"><img src="slide11/4.png"></div>';
-	break;
-	case 12:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"><img src="slide3/1.jpg" width="1024" height="768"></div>';
-	break;
-	case 13:
-	content='<link rel="stylesheet" type="text/css" href="slide4/slide1.css" media="screen"/><div class="background"><img src="slide13/1.jpg" width="1024" height="768" alt=""></div><div class="bullet1"><img src="slide4/1.png"></div><div class="bullet2"><img src="slide4/2.png"></div><div class="bullet3"><img src="slide4/3.png"></div>';
-	break;
-}
+	switch(custcomslideid){
+		case 1:
+		content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="video1"><video autoplay poster="slide1/Poster.png" onplay="onPlay()" onended="onEnded1()" id="startVideo" width="1024" height="768"><source src="slide1/Part1.mp4" type="video/mp4"></video></div><div class="video2"><video onended="onEnded2()" id="midVideo" width="1024" height="768"><source src="slide1/Part2.mp4" type="video/mp4"></video></div><div class="video3"><video onended="onEnded3()" id="endVideo" width="1024" height="768"><source src="slide1/Part3.mp4" type="video/mp4"></video></div><div class="button1" onclick="playVid1()"></div><div class="button2" onclick="playVid2()"></div><div class="button3" onclick="playVid3()"></div>';
+		break;
+	}
 
 	$("#main_content").html(content);
-	 localStorage.setItem("gotoNextPrevBrand" ,1);//if one than next if 2 than prev
+	  localStorage.setItem("gotoNextPrevBrand" ,1);//if one than next if 2 than prev
 
 //custom slide additional code ends here....	 
 	 
 }else{
 
-	$("#main_content").html('<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"><img src="slide1/1.jpg" width="1024" height="768" alt=""></div><div class="popVid1" onclick="checkBtns(2);"></div><div class="popVid2" onclick="checkBtns(5);"></div><div class="popVid3" onclick="checkBtns(8);"></div><div class="popVid4" onclick="checkBtns(11);"></div>');
+$("#main_content").html('<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="video1"><video autoplay poster="slide1/Poster.png" onplay="onPlay()" onended="onEnded1()" id="startVideo" width="1024" height="768"><source src="slide1/Part1.mp4" type="video/mp4"></video></div><div class="video2"><video onended="onEnded2()" id="midVideo" width="1024" height="768"><source src="slide1/Part2.mp4" type="video/mp4"></video></div><div class="video3"><video onended="onEnded3()" id="endVideo" width="1024" height="768"><source src="slide1/Part3.mp4" type="video/mp4"></video></div><div class="button1" onclick="playVid1()"></div><div class="button2" onclick="playVid2()"></div><div class="button3" onclick="playVid3()"></div>');
 }
-
 });
 </script> 
 
