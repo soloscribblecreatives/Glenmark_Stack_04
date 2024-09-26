@@ -10,52 +10,108 @@
 	z-index: 1;
 }
 
-.video1 {
+.takeCover {
 	position: absolute;
-	width: 1024px;
-	height: 768px;
-	z-index:5;
+  left: 867px;
+  top: 675px;
+  width: 44px;
+  height: 93px;
+	z-index: 10;
 }
 
-.button1 {
-	position: absolute;
-	width: 1024px;
-	height: 768px;
-	z-index: 50;
+.hit_1, .hit_2, .hit_3, .hit_4, .hit_5, .hit_6, .hit_7, .hit_8, .hit_9  {
+  position: absolute;
+  width: 1024px;
+  height: 768px;
+  display: none;
+  z-index: 15;
 }
 
-.video2 {
+.hit_pop1 {
+	position: absolute;
+  left: 911px;
+  top: 675px;
+  width: 44px;
+  height: 93px;
+	z-index: 10;
+}
+
+.hit_pop2 {
+	position: absolute;
+  left: 955px;
+  top: 675px;
+  width: 44px;
+  height: 93px;
+	z-index: 10;
+}
+
+.hit_pop3 {
+	position: absolute;
+  left: 56px;
+  top: 491px;
+  width: 227px;
+  height: 111px;
+	z-index: 10;
+}
+
+.hit_pop4 {
+	position: absolute;
+  left: 284px;
+  top: 491px;
+  width: 227px;
+  height: 111px;
+	z-index: 10;
+}
+
+.hit_pop5 {
+	position: absolute;
+  left: 512px;
+  top: 491px;
+  width: 227px;
+  height: 111px;
+	z-index: 10;
+}
+
+.hit_pop6 {
+	position: absolute;
+  left: 740px;
+  top: 491px;
+  width: 227px;
+  height: 111px;
+	z-index: 10;
+}
+
+.hit_pop7 {
+	position: absolute;
+  left: 170px;
+  top: 603px;
+  width: 227px;
+  height: 111px;
+	z-index: 10;
+}
+
+.hit_pop8 {
+	position: absolute;
+  left: 398px;
+  top: 603px;
+  width: 227px;
+  height: 111px;
+	z-index: 10;
+}
+
+.hit_pop9 {
+	position: absolute;
+  left: 626px;
+  top: 603px;
+  width: 227px;
+  height: 111px;
+	z-index: 10;
+}
+
+.hit_close1 {
 	position: absolute;
 	width: 1024px;
 	height: 768px;
 	display: none;
-	z-index:10;
-}
-
-.button2 {
-	position: absolute;
-  left: 545px;
-  top: 481px;
-  width: 421px;
-  height: 287px;
-	display: none;
-	z-index: 55;
-}
-
-.video3 {
-	position: absolute;
-	width: 1024px;
-	height: 768px;
-	display: none;
-	z-index:15;
-}
-
-.button3 {
-	position: absolute;
-  left: 128px;
-  top: 229px;
-  width: 802px;
-  height: 520px;
-	display: none;
-	z-index: 50;
+	z-index: 20;
 }
