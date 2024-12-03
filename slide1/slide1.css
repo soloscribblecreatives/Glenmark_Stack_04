@@ -10,16 +10,25 @@
 	z-index: 1;
 }
 
+.nav {
+	position: absolute;
+  left: 849px;
+  top: 696px;
+  width: 147px;
+  height: 46px;
+	z-index: 3;
+}
+
 .takeCover {
 	position: absolute;
-  left: 867px;
-  top: 675px;
-  width: 44px;
-  height: 93px;
+  left: 848px;
+  top: 666px;
+  width: 47px;
+  height: 102px;
 	z-index: 10;
 }
 
-.hit_1, .hit_2, .hit_3, .hit_4, .hit_5, .hit_6, .hit_7, .hit_8, .hit_9  {
+.hit_1, .hit_2, .hit_3, .hit_4, .hit_5, .hit_6, .hit_7  {
   position: absolute;
   width: 1024px;
   height: 768px;
@@ -29,83 +38,58 @@
 
 .hit_pop1 {
 	position: absolute;
-  left: 911px;
-  top: 675px;
-  width: 44px;
-  height: 93px;
+  left: 899px;
+  top: 666px;
+  width: 47px;
+  height: 102px;
 	z-index: 10;
 }
 
 .hit_pop2 {
 	position: absolute;
-  left: 955px;
-  top: 675px;
-  width: 44px;
-  height: 93px;
+  left: 950px;
+  top: 666px;
+  width: 47px;
+  height: 102px;
 	z-index: 10;
 }
 
 .hit_pop3 {
 	position: absolute;
-  left: 56px;
-  top: 491px;
-  width: 227px;
-  height: 111px;
-	z-index: 10;
+  left: 895px;
+  top: 668px;
+  width: 55px;
+  height: 100px;
+    display: none;
+	z-index: 25;
 }
 
 .hit_pop4 {
 	position: absolute;
-  left: 284px;
-  top: 491px;
-  width: 227px;
-  height: 111px;
+  left: 551px;
+  top: 424px;
+  width: 163px;
+  height: 273px;
 	z-index: 10;
 }
 
 .hit_pop5 {
 	position: absolute;
-  left: 512px;
-  top: 491px;
-  width: 227px;
-  height: 111px;
-	z-index: 10;
+  left: 895px;
+  top: 668px;
+  width: 55px;
+  height: 100px;
+  display: none;
+	z-index: 25;
 }
 
 .hit_pop6 {
-	position: absolute;
-  left: 740px;
-  top: 491px;
-  width: 227px;
-  height: 111px;
-	z-index: 10;
-}
-
-.hit_pop7 {
-	position: absolute;
-  left: 170px;
-  top: 603px;
-  width: 227px;
-  height: 111px;
-	z-index: 10;
-}
-
-.hit_pop8 {
-	position: absolute;
-  left: 398px;
-  top: 603px;
-  width: 227px;
-  height: 111px;
-	z-index: 10;
-}
-
-.hit_pop9 {
-	position: absolute;
-  left: 626px;
-  top: 603px;
-  width: 227px;
-  height: 111px;
-	z-index: 10;
+  position: absolute;
+  left: 950px;
+  top: 668px;
+  width: 55px;
+  height: 100px;
+  z-index: 10;
 }
 
 .hit_close1 {
