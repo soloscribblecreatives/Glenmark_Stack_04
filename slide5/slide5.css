@@ -1,0 +1,65 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+.s1 {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	z-index: 1;
+}
+
+.s2 {
+	position: absolute;
+  left: 374px;
+  top: 485px;
+  width: 33px;
+  height: 34px;
+	animation: fadeIn 0.5s;
+	animation-delay: 0s;
+	animation-fill-mode: both;
+	display: none;
+	z-index: 5;
+}
+
+.s3 {
+	position: absolute;
+  left: 625px;
+  top: 485px;
+  width: 33px;
+  height: 34px;
+	animation: fadeIn 0.5s;
+	animation-delay: 0s;
+	animation-fill-mode: both;
+	display: none;
+	z-index: 10;
+}
+
+.lobe {
+  position: absolute;
+  left: 353px;
+  top: 250px;
+  width: 241px;
+  height: 302px;
+  z-index: 50;
+}
+
+.pio {
+  position: absolute;
+  left: 604px;
+  top: 250px;
+  width: 241px;
+  height: 302px;
+  z-index: 50;
+}
+
+@keyframes flashLong {
+  0%,  100% {
+    opacity: 0;
+  }
+
+  25%, 50%, 75% {
+    opacity: 1;
+  }
+}

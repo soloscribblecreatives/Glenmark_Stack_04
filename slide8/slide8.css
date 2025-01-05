@@ -1,0 +1,85 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+.s1 {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	z-index: 1;
+}
+
+.s2 {
+	position: absolute;
+  left: 217px;
+  top: 415px;
+  width: 68px;
+  height: 45px;
+	animation: revealHorizontal 3s;
+	animation-delay: 0.2s;
+	animation-fill-mode: both;
+	clip: rect(0px,0px,50px,0px);
+	z-index: 5;
+}
+
+.s3 {
+	position: absolute;
+  left: 508px;
+  top: 415px;
+  width: 69px;
+  height: 45px;
+	animation: revealHorizontal 3s;
+	animation-delay: 1.2s;
+	animation-fill-mode: both;
+	clip: rect(0px,0px,50px,0px);
+	z-index: 5;
+}
+
+.s4 {
+	position: absolute;
+  left: 798px;
+  top: 415px;
+  width: 69px;
+  height: 45px;
+	animation: revealHorizontal 3s;
+	animation-delay: 2.2s;
+	animation-fill-mode: both;
+	clip: rect(0px,0px,50px,0px);
+	z-index: 5;
+}
+
+.next {
+  position: absolute;
+  left: 920px;
+  top: 596px;
+  width: 83px;
+  height: 83px;
+  	animation: pulseBig 1s infinite;
+	animation-delay: 0s;
+	animation-fill-mode: both;
+  z-index: 50;
+}
+
+
+@keyframes flashLong {
+  0%,  100% {
+    opacity: 0;
+  }
+
+  25%, 50%, 75% {
+    opacity: 1;
+  }
+}
+
+@keyframes revealHorizontal {
+  0% {
+    clip: rect(0px,0px,50px,0px);
+	opacity: 1;
+  }
+  
+  100% {
+    clip: rect(0px,80px,200px,0px);
+	opacity: 1;
+  }
+}

@@ -1,0 +1,72 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+.s1 {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	z-index: 1;
+}
+
+.s2 {
+	position: absolute;
+  left: 335px;
+  top: 318px;
+  width: 391px;
+  height: 126px;
+	animation: revealHorizontal 5s;
+	animation-delay: 0.2s;
+	animation-fill-mode: both;
+	clip: rect(0px,0px,200px,0px);
+	z-index: 5;
+}
+
+.s3 {
+	position: absolute;
+  left: 334px;
+  top: 335px;
+  width: 393px;
+  height: 168px;
+	animation: revealHorizontal 3s;
+	animation-delay: 0.2s;
+	animation-fill-mode: both;
+	clip: rect(0px,0px,200px,0px);
+	z-index: 5;
+}
+
+.next {
+  position: absolute;
+  left: 919px;
+  top: 589px;
+  width: 83px;
+  height: 83px;
+  	animation: pulseBig 1s infinite;
+	animation-delay: 0s;
+	animation-fill-mode: both;
+  z-index: 50;
+}
+
+
+@keyframes flashLong {
+  0%,  100% {
+    opacity: 0;
+  }
+
+  25%, 50%, 75% {
+    opacity: 1;
+  }
+}
+
+@keyframes revealHorizontal {
+  0% {
+    clip: rect(0px,0px,200px,0px);
+	opacity: 1;
+  }
+  
+  100% {
+    clip: rect(0px,400px,200px,0px);
+	opacity: 1;
+  }
+}

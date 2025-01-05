@@ -1,0 +1,47 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+.s1 {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	z-index: 1;
+}
+
+.s2 {
+	position: absolute;
+  left: 351px;
+  top: 134px;
+  width: 576px;
+  height: 414px;
+	animation: zoomIn 0.5s;
+	animation-delay: 0s;
+	animation-fill-mode: both;
+	transform-origin: bottom left;
+	z-index: 5;
+}
+
+.next {
+  position: absolute;
+  left: 919px;
+  top: 589px;
+  width: 83px;
+  height: 83px;
+  	animation: pulseBig 1s infinite;
+	animation-delay: 0s;
+	animation-fill-mode: both;
+  z-index: 50;
+}
+
+
+@keyframes flashLong {
+  0%,  100% {
+    opacity: 0;
+  }
+
+  25%, 50%, 75% {
+    opacity: 1;
+  }
+}

@@ -109,7 +109,7 @@ html[xmlns] .clearfix {
 	position: relative;
 	top: 380px;
 	opacity: .8;
-	display: block;
+	display: none;
 	z-index: 999;
 	visibility: visible;
 }
@@ -160,6 +160,7 @@ html[xmlns] .clearfix {
 	-webkit-transition: bottom 5s, -webkit-transform 2s;
 	transition: bottom 1s, -webkit-transform 2s;
 	visibility: visible;
+	display: none;
 	z-index: 999;
 }
 .slide_jumper {
@@ -199,7 +200,6 @@ html[xmlns] .clearfix {
 	position: absolute;
 	bottom: 0px;
 	left: 38px;
-	display: block;
 	width: 56px;
 	height: 20px;
 	border-radius: 5px 5px 0 0;
@@ -209,6 +209,7 @@ html[xmlns] .clearfix {
 	-webkit-transition: bottom 1s, -webkit-transform 2s;
 	transition: bottom 1s, -webkit-transform 2s;
 	visibility: visible;
+	display: none;
 	z-index: 999;
 }
 .reference.active {
@@ -236,4 +237,56 @@ html[xmlns] .clearfix {
 	border: 1px solid red;
 	background-color: rgba(0,0,0,0.5);
 	color: #ffffff;
+}
+
+@keyframes pulseBig {
+  0% {
+    -webkit-transform: scale3d(0.8, 0.8, 0.8);
+    transform: scale3d(0.8, 0.8, 0.8);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  100% {
+    -webkit-transform: scale3d(0.8, 0.8, 0.8);
+    transform: scale3d(0.8, 0.8, 0.8);
+  }
+}
+
+
+.blocker {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 1024px;
+	height: 768px;
+	z-index: 30;
+}
+
+.hit_1  {
+  position: absolute;
+  width: 1024px;
+  height: 768px;
+  display: none;
+  z-index: 65;
+}
+
+.hit_pop1 {
+	position: absolute;
+  left: 897px;
+  top: 697px;
+  width: 127px;
+  height: 71px;
+	z-index: 60;
+}
+
+.hit_close1 {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	display: none;
+	z-index: 70;
 }

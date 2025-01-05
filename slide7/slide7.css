@@ -1,0 +1,58 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+.s1 {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	z-index: 1;
+}
+
+.s2 {
+	position: absolute;
+  left: 117px;
+  top: 445px;
+  width: 733px;
+  height: 24px;
+	animation: flashLong 2s infinite;
+	animation-delay: 0.2s;
+	animation-fill-mode: both;
+	z-index: 5;
+}
+
+.next {
+  position: absolute;
+  left: 919px;
+  top: 611px;
+  width: 83px;
+  height: 83px;
+  	animation: pulseBig 1s infinite;
+	animation-delay: 0s;
+	animation-fill-mode: both;
+  z-index: 50;
+}
+
+
+@keyframes flashLong {
+  0%,  100% {
+    opacity: 0;
+  }
+
+  5%, 50%, 95% {
+    opacity: 1;
+  }
+}
+
+@keyframes revealHorizontal {
+  0% {
+    clip: rect(0px,0px,200px,0px);
+	opacity: 1;
+  }
+  
+  100% {
+    clip: rect(0px,400px,200px,0px);
+	opacity: 1;
+  }
+}
