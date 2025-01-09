@@ -12,20 +12,47 @@
 
 .s2 {
 	position: absolute;
-  left: 117px;
-  top: 445px;
-  width: 733px;
-  height: 24px;
-	animation: flashLong 2s infinite;
+  left: 217px;
+  top: 415px;
+  width: 68px;
+  height: 45px;
+	animation: revealHorizontal 2s;
 	animation-delay: 0.2s;
 	animation-fill-mode: both;
+	clip: rect(0px,0px,50px,0px);
+	z-index: 5;
+}
+
+.s3 {
+	position: absolute;
+  left: 508px;
+  top: 415px;
+  width: 69px;
+  height: 45px;
+	animation: revealHorizontal 2s;
+	animation-delay: 0.2s;
+	animation-fill-mode: both;
+	clip: rect(0px,0px,50px,0px);
+	z-index: 5;
+}
+
+.s4 {
+	position: absolute;
+  left: 798px;
+  top: 415px;
+  width: 69px;
+  height: 45px;
+	animation: revealHorizontal 2s;
+	animation-delay: 0.2s;
+	animation-fill-mode: both;
+	clip: rect(0px,0px,50px,0px);
 	z-index: 5;
 }
 
 .next {
   position: absolute;
-  left: 919px;
-  top: 611px;
+  left: 920px;
+  top: 596px;
   width: 83px;
   height: 83px;
   	animation: pulseBig 1s infinite;
@@ -40,19 +67,19 @@
     opacity: 0;
   }
 
-  5%, 50%, 95% {
+  25%, 50%, 75% {
     opacity: 1;
   }
 }
 
 @keyframes revealHorizontal {
   0% {
-    clip: rect(0px,0px,200px,0px);
+    clip: rect(0px,0px,50px,0px);
 	opacity: 1;
   }
   
   100% {
-    clip: rect(0px,400px,200px,0px);
+    clip: rect(0px,80px,200px,0px);
 	opacity: 1;
   }
 }

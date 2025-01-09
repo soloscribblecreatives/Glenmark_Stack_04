@@ -12,29 +12,47 @@
 
 .s2 {
 	position: absolute;
-  left: 351px;
-  top: 134px;
-  width: 576px;
-  height: 414px;
-	animation: zoomIn 0.5s;
+  left: 374px;
+  top: 485px;
+  width: 33px;
+  height: 34px;
+	animation: fadeIn 0.5s;
 	animation-delay: 0s;
 	animation-fill-mode: both;
-	transform-origin: bottom left;
+	display: none;
 	z-index: 5;
 }
 
-.next {
-  position: absolute;
-  left: 919px;
-  top: 589px;
-  width: 83px;
-  height: 83px;
-  	animation: pulseBig 1s infinite;
+.s3 {
+	position: absolute;
+  left: 625px;
+  top: 485px;
+  width: 33px;
+  height: 34px;
+	animation: fadeIn 0.5s;
 	animation-delay: 0s;
 	animation-fill-mode: both;
+	display: none;
+	z-index: 10;
+}
+
+.lobe {
+  position: absolute;
+  left: 353px;
+  top: 250px;
+  width: 241px;
+  height: 302px;
   z-index: 50;
 }
 
+.pio {
+  position: absolute;
+  left: 604px;
+  top: 250px;
+  width: 241px;
+  height: 302px;
+  z-index: 50;
+}
 
 @keyframes flashLong {
   0%,  100% {

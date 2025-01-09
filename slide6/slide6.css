@@ -12,34 +12,20 @@
 
 .s2 {
 	position: absolute;
-  left: 335px;
-  top: 318px;
-  width: 391px;
-  height: 126px;
-	animation: revealHorizontal 5s;
+  left: 117px;
+  top: 445px;
+  width: 733px;
+  height: 24px;
+	animation: flashLong 2s infinite;
 	animation-delay: 0.2s;
 	animation-fill-mode: both;
-	clip: rect(0px,0px,200px,0px);
-	z-index: 5;
-}
-
-.s3 {
-	position: absolute;
-  left: 334px;
-  top: 335px;
-  width: 393px;
-  height: 168px;
-	animation: revealHorizontal 3s;
-	animation-delay: 0.2s;
-	animation-fill-mode: both;
-	clip: rect(0px,0px,200px,0px);
 	z-index: 5;
 }
 
 .next {
   position: absolute;
   left: 919px;
-  top: 589px;
+  top: 611px;
   width: 83px;
   height: 83px;
   	animation: pulseBig 1s infinite;
@@ -54,7 +40,7 @@
     opacity: 0;
   }
 
-  25%, 50%, 75% {
+  5%, 50%, 95% {
     opacity: 1;
   }
 }
