@@ -12,8 +12,8 @@
 
 .s2 {
 	position: absolute;
-  left: 351px;
-  top: 387px;
+  left: 342px;
+  top: 337px;
   width: 38px;
   height: 38px;
 	animation: fadeIn 0.5s;
@@ -23,15 +23,36 @@
 	z-index: 5;
 }
 
-.both {
+.s3 {
+	position: absolute;
+  left: 629px;
+  top: 337px;
+  width: 38px;
+  height: 38px;
+	animation: fadeIn 0.5s;
+	animation-delay: 0s;
+	animation-fill-mode: both;
+	display: none;
+	z-index: 10;
+}
+
+.lobe {
   position: absolute;
-  left: 322px;
-  top: 201px;
-  width: 354px;
-  height: 258px;
+  left: 317px;
+  top: 287px;
+  width: 280px;
+  height: 132px;
   z-index: 50;
 }
 
+.pio {
+  position: absolute;
+  left: 604px;
+  top: 287px;
+  width: 280px;
+  height: 132px;
+  z-index: 50;
+}
 
 @keyframes flashLong {
   0%,  100% {

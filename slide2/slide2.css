@@ -12,10 +12,10 @@
 
 .s2 {
 	position: absolute;
-  left: 512px;
-  top: 179px;
-  width: 465px;
-  height: 304px;
+  left: 536px;
+  top: 177px;
+  width: 432px;
+  height: 310px;
 	animation: zoomIn 0.5s;
 	animation-delay: 0.1s;
 	animation-fill-mode: both;

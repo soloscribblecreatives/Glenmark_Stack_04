@@ -12,24 +12,12 @@
 
 .s2 {
 	position: absolute;
-  left: 134px;
-  top: 272px;
-  width: 352px;
-  height: 304px;
-	animation: fadeInRight 0.5s;
-	animation-delay: 0.2s;
-	animation-fill-mode: both;
-	z-index: 5;
-}
-
-.s3 {
-	position: absolute;
-  left: 531px;
-  top: 272px;
-  width: 359px;
-  height: 304px;
-	animation: fadeInRight 0.5s;
-	animation-delay: 0.4s;
+  left: 328px;
+  top: 154px;
+  width: 369px;
+  height: 176px;
+	animation: zoomIn 0.5s;
+	animation-delay: 0s;
 	animation-fill-mode: both;
 	z-index: 5;
 }
@@ -46,7 +34,6 @@
   z-index: 50;
 }
 
-
 @keyframes flashLong {
   0%,  100% {
     opacity: 0;
@@ -54,17 +41,5 @@
 
   25%, 50%, 75% {
     opacity: 1;
-  }
-}
-
-@keyframes revealHorizontal {
-  0% {
-    clip: rect(0px,0px,200px,0px);
-	opacity: 1;
-  }
-  
-  100% {
-    clip: rect(0px,400px,200px,0px);
-	opacity: 1;
   }
 }
